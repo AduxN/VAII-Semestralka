@@ -21,10 +21,21 @@
 <body>
 <nav>
     <ul class="menu">
-        <li class="item"><a href="?c=home">Domov</a></li>
-        <li class="item"><a href="?c=news">Novinky</a></li>
-        <li class="item"><a href="?c=reviews">Recenzie</a></li>
-        <li class="item"><a href="?c=offers">Špeciálne ponuky</a></li>
+        <li>
+            <div class="defaultmenu">
+                <a href="?c=home" class="item">Domov</a>
+                <a href="?c=news" class="item">Novinky</a>
+                <a href="?c=reviews" class="item">Recenzie</a>
+                <a href="?c=offers" class="item">Špeciálne ponuky</a>
+            </div>
+        </li>
+        <li>
+            <div class="btns">
+
+                <a href="?c=auth&a=login"><button type="button" class="btn btn-primary loginbtn">Prihlás sa</button></a>
+                <a href="?c=auth&a=signin"><button type="button" class="btn btn-primary signinbtn">Registruj sa</button></a>
+            </div>
+        </li>
     </ul>
 </nav>
 <div class="container-fluid mt-3">

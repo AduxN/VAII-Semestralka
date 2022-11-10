@@ -21,36 +21,91 @@ body {
 /*mobile*/
 @media screen and (max-width: 600px) {
     .menu {
-        text-align: center;
-        display: flex;
         flex-direction: column;
-        justify-content: space-evenly;
-        align-items: center;
-        list-style-type: none;
-        background-color: #1e1e1e;
+        row-gap: 10px;
+        padding: 16px 0;
+    }
 
-        margin-top: 0;
-        padding-top: 16px;
-        padding-bottom: 16px;
-        row-gap: 24px;
-        overflow: hidden;
+    .defaultmenu {
+        gap: 20px;
+        flex-direction: column;
+    }
+
+    article {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    p {
+        padding: 2%;
     }
 }
 
+/*tablet*/
+@media screen and (min-width: 600px) and (max-width: 900px) {
+    .menu {
+        flex-direction: column;
+        row-gap: 24px;
+        padding: 16px 0;
+    }
+
+    .defaultmenu {
+        gap: 40px;
+    }
+
+    .articles {
+        margin: 0;
+    }
+
+}
+
+/*desktop*/
+@media screen and (min-width: 900px) {
+    .menu {
+        flex-direction: row;
+        padding: 10px 5%;
+    }
+
+    .defaultmenu {
+        gap: 60px;
+    }
+    article {
+        margin-left: 2%;
+        margin-right: 2%;
+    }
+
+    p {
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+
+
+}
 .menu {
     text-align: center;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
+    list-style-type: none;
+    background-color: #1e1e1e;
+    margin-top: 0;
+    overflow: hidden;
+
+}
+
+.defaultmenu {
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
     list-style-type: none;
     background-color: #1e1e1e;
 
     margin-top: 0;
-    padding-top: 16px;
-    padding-bottom: 16px;
+    padding: 10px 16px;
     overflow: hidden;
-
+    white-space: nowrap;
 }
+
 .menu a {
     font-size: larger;
     font-weight: bold;
@@ -136,16 +191,17 @@ hr {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-right: 10%;
-    margin-left: 10%;
+    margin-right: 5%;
+    margin-left: 5%;
     /*border: solid #1e1e1e;
     border-radius: 2%;*/
 }
 article {
     margin-bottom: 5%;
-    margin-left: 2%;
-    margin-right: 2%;
-    border: 5px solid #1e1e1e;
+
+    border-style: solid none ;
+    border-color: #1e1e1e;
+    border-width: 5px;
     border-radius: 15px;
     padding-top: 5%;
     padding-bottom: 5%;
@@ -167,4 +223,23 @@ p.review_text {
     max-width: 80%;
     margin-top: 16px;
     height: auto;
+}
+.btn {
+    font-size: smaller;
+    font-weight: bold;
+    text-decoration: none;
+    display:flex;
+    margin-right: auto;
+}
+
+.btns {
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+    white-space: nowrap;
+    gap: 10px;
+}
+
+ul {
+    padding-inline-start: 0;
 }
