@@ -1,5 +1,5 @@
-<h1>Vitajte na hernom portáli GameCommunity</h1>
-
+<h1>Vitajte na hernom portáli</h1>
+<img class="logotext_img" src="public/images/logotext.png" alt="GameCommunity">
 <p>
     Každý deň môžete na našom webe nájsť všetky novinky ohľadom PC hier,
     recenzie od našich testerov, ako aj informácie o špeciálnych zľavách

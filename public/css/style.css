@@ -161,6 +161,14 @@ body {
     gap: 10px;
 }
 
+.logo_img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 50%;
+    width: 32px;
+}
+
 .menu a {
     font-size: larger;
     font-weight: bold;
@@ -185,7 +193,13 @@ h1 {
 .gaming_img {
     border-radius: 2%;
     max-width: 80%;
-    margin-top: 64px;
+    margin-top: 48px;
+    height: auto;
+}
+.logotext_img {
+    border-radius: 2%;
+    max-width: 90%;
+    margin-bottom: 48px;
     height: auto;
 }
 
