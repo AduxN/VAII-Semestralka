@@ -1,6 +1,6 @@
 
 <h1>Špeciálne ponuky</h1>
-<h2>Aktuálne ponuky a zľavy na vaše obľúbené hry, na jednom mieste</h2>
+<h2 class="offersTitle">Aktuálne ponuky a zľavy na vaše obľúbené hry, na jednom mieste</h2>
 <div>
     <ul class="offers">
         <li class="offer"><a href="https://store.steampowered.com/sale/overcookedfranchisesale">Overcooked Franchise / až do -80%</a></li>
