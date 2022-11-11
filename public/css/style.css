@@ -125,6 +125,7 @@ body {
     }
 }
 
+/* cele menu */
 .menu {
     text-align: center;
     display: flex;
@@ -137,6 +138,7 @@ body {
 
 }
 
+/* menu bez prihlasenia a registracie */
 .defaultmenu {
     display: flex;
     justify-content: space-evenly;
@@ -148,6 +150,15 @@ body {
     padding: 10px 16px;
     overflow: hidden;
     white-space: nowrap;
+}
+
+/* prihlasenie a registracia */
+.btns {
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+    white-space: nowrap;
+    gap: 10px;
 }
 
 .menu a {
@@ -164,8 +175,7 @@ body {
 }
 
 h1 {
-    padding-top: 24px;
-    padding-bottom: 24px;
+    padding: 24px 0;
     color: #1e1e1e;
 }
 
@@ -186,9 +196,7 @@ iframe , .twitter-tweet {
 }
 
 footer {
-    margin-top: 48px;
-    margin-left: 5%;
-    margin-right: 5%;
+    margin: 48px 5% 0;
 }
 
 hr {
@@ -204,7 +212,7 @@ hr {
 
 .footer_text p {
     padding: 0 5%;
-    margin: 5px 0 0;
+    margin-top: 5px;
     font-size: 16px;
 }
 
@@ -219,9 +227,7 @@ hr {
 .offer {
     background-color: #1e1e1e;
     border-radius: 10px;
-    margin-bottom: 5px;
-    margin-right: 32px;
-    margin-left: 32px;
+    margin: 0 32px 5px;
 }
 .offers a {
     text-decoration: none;
@@ -235,21 +241,16 @@ hr {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-right: 5%;
-    margin-left: 5%;
-    /*border: solid #1e1e1e;
-    border-radius: 2%;*/
+    margin: 0 5%;
 }
 
 article {
     margin-bottom: 5%;
-
     border-style: solid none ;
     border-color: #1e1e1e;
     border-width: 5px;
     border-radius: 15px;
-    padding-top: 5%;
-    padding-bottom: 5%;
+    padding: 5% 0;
 }
 
 p.review_text {
@@ -271,14 +272,6 @@ p.review_text {
     text-decoration: none;
     display:flex;
     margin-right: auto;
-}
-
-.btns {
-    display: flex;
-    justify-content: space-between;
-    overflow: hidden;
-    white-space: nowrap;
-    gap: 10px;
 }
 
 ul {
