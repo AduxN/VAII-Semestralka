@@ -14,7 +14,7 @@ class Review extends Model
     protected ?string $paragraph4;
     protected string $image;
 
-    public function __construct(int $id, string $title, ?string $description = null, string $paragraph1, ?string $paragraph2 = null, ?string $paragraph3 = null, ?string $paragraph4 = null, string $image)
+    /*public function __construct(int $id, string $title, ?string $description, string $paragraph1, ?string $paragraph2, ?string $paragraph3, ?string $paragraph4, string $image)
     {
         $this->id = $id;
         $this->title = $title;
@@ -25,6 +25,7 @@ class Review extends Model
         $this->paragraph4 = $paragraph4;
         $this->image = $image;
     }
+    */
     /**
      * @return int
      */

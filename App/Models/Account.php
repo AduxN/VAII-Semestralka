@@ -11,7 +11,7 @@ class Account extends Model
     protected ?string $name;
     protected string $email;
 
-    public function __construct(int $id, string $login, string $password, ?string $name = null, string $email)
+    /*public function __construct(int $id, string $login, string $password, ?string $name, string $email)
     {
         $this->id = $id;
         $this->login = $login;
@@ -19,7 +19,7 @@ class Account extends Model
         $this->name = $name;
         $this->email = $email;
     }
-
+    */
     /**
      * @return int
      */
