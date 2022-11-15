@@ -1,18 +1,19 @@
 <?php
-declare(strict_types=1);
+
 namespace App\Models;
 use App\Core\Model;
 
-class account extends Model
+class Account extends Model
 {
     protected int $id;
-    protected ?string $login;
-    protected ?string $password;
+    protected string $login;
+    protected string $password;
     protected ?string $name;
-    protected ?string $email;
+    protected string $email;
 
-    public function __construct(?string $login = null, ?string $password = null, ?string $name = null, ?string $email = null)
+    public function __construct(int $id, string $login, string $password, ?string $name = null, string $email)
     {
+        $this->id = $id;
         $this->login = $login;
         $this->password = $password;
         $this->name = $name;
@@ -99,14 +100,14 @@ class account extends Model
         $this->email = $email;
     }
 
-    public static function setTableName()
+    static public function setTableName(): string
     {
         return "ucet";
     }
 
-    public static function setColumnNames()
+    static public function setColumnNames(): array
     {
-        return ["id", "login", "password", "name","email"];
+        return ["id", "login", "password", "name", "email"];
     }
 
 }
