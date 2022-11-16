@@ -13,6 +13,9 @@ class Review extends Model
     protected ?string $paragraph3;
     protected ?string $paragraph4;
     protected string $image;
+    protected string $imagealt;
+
+
 
     /*public function __construct(int $id, string $title, ?string $description, string $paragraph1, ?string $paragraph2, ?string $paragraph3, ?string $paragraph4, string $image)
     {
@@ -152,6 +155,22 @@ class Review extends Model
     public function setImage(string $image): void
     {
         $this->image = $image;
+    }
+
+    /**
+     * @return string
+     */
+    public function getImagealt(): string
+    {
+        return $this->imagealt;
+    }
+
+    /**
+     * @param string $imagealt
+     */
+    public function setImagealt(string $imagealt): void
+    {
+        $this->imagealt = $imagealt;
     }
 
     static public function setTableName(): string

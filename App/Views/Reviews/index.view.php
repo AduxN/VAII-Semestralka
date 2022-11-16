@@ -1,21 +1,16 @@
+<?php /* @var \App\Models\Review[] $data */
+?>
 <h1>Recenzie</h1>
 
 <div class="articles">
-    <article>
-        <h2>DAKAR DESERT RALLY</h2>
-        <p class="review_text">O hru sa starí portugalská vetva štúdia Saber Interactive a sú to všetko nadšenci, ktorí Dakar naozaj zbožňujú, čo je na hre aj vidno. Zároveň oproti iným licencovaným športovým hrám zahodili číslovku či označenie ročníka a dôvod na to je jednoduchý. Toto totiž nie je len Dakar hra k aktuálnemu ročníku, ale má predstavovať všetko, čím je aktuálne Dakar. Najznámejšia svetová rally síce nesie názov po senegalskom meste, ale od roku 2020 sa jazdí v Saudskej Arábii a hra pokrýva práve toto obdobie, teda nielen ročník 2022, ale aj roky 2021 a 2020.</p>
-        <p class="review_text">Je tu tak toho dosť, ale to len zdanlivo. Už prvé spustenie vám ukáže, že aj keď hre nechýba srdce, sú tu veci, ktoré chýbajú. Prezentácia je totiž dosť odfláknutá a hra s licenciou Dakaru by si zaslúžila niečo veľkolepejšie. Tu je to veľmi strohé a pretavilo sa to aj do hernej ponuky, ktorá je skromná. Ak sa nechcete detailnejšie vŕtať v nastaveniach, máte na výber už len rebríčky, multiplayer a kampaň. Nenájdete tu rýchlu hru, nenájdete tu ani lokálny multiplayer a ani podobné veci. A už asi chápete, prečo je podľa mňa písať o tom, čo všetko v hre nie je. Ani tu ale, bohužiaľ, nekončí výpis vecí, ktoré v Dakar Desert Rally chýbajú. Autori to už ale teraz pri vydaní kompenzujú nízkou cenou.</p>
-        <p class="review_text">Graficky je nový Dakar fajn. Ja viem, že to nie je najkrajšia hrana svete, ale v zásade vyzerá dobre a ak si pri obrázkoch a videách všimnete nedostatky, priamo v hre pri jazdení ich už tak nevnímate. Hlavne pri menej typickom počasí a dobre zvolenej dennej dobe vie hra graficky aj prekvapiť a vyzerá naozaj dobre. teda nočné jazdenie v búrke či prekonávanie dún počas západu slnka. Zvuk je veľmi dobrý. Vozidlá znejú realisticky a do jazdenia vám hrá síce generická, ale dobre znejúca rocková hudba. Navigátor je spracovaný perfektne, jeho hlas neruší a inštrukcie sú tak presné, že som už po pár dňoch začal jazdiť len podľa nich a roadbook som ani nesledoval. Čo bol problém na motorkách, lebo tam navigátora nemáte.</p>
-        <img src="public/images/dakar-desert-rally-38316-7607494-2-1070.jpg" alt="dakar" class="review_img">
-        <p class="review_text">Raz to bude perfektná hra, ale zatiaľ je Dakar Desert Rally len akýsi Early Access, ktorý má veľa potenciálu a málo obsahu. Chýbajú trasy, chýbajú multiplayerové možnosti, chýbajú režimy alebo aj úplne bežné veci, ktoré od hry čakáte. Dokonca aj force feedback (ktorý som si vyskúšal na Gamescome a je spracovaný dobre) je zapracovaný len čiastočne v tom ohľade, že je podpora volantov veľmi úzka. Napríklad Fanatec dostane podporu FF neskôr. Niekedy v budúcnosti si túto hru kúpte a užite, také je moje odporúčanie. Užiť si ju síce môžete aj teraz, ale bude to dosť krátke a neviem, ako dlho budeme čakať na to, kým príde ten zvyšok.</p>
-    </article>
-
-    <article>
-        <h2>FIFA 23</h2>
-        <p class="review_text">Každý, kto sleduje situáciu v hernej oblasti, asi začul ruch okolo licencie FIFA a EA Sports. Výsledný stav je taký, že FIFA 23 je posledná hra, ktorá nadväzuje na dlhoročnú tradíciu. Preto je to sčasti unikátny kúsok pre fanúšikov, hoci možno sa budúci rok dočkajú viac-menej podobnej hry s iným názvom. FIFA 23 má tak šancu ukázať sa v najlepšom svetle a už aj nové konzoly pokročili do fázy, že sa s nimi vie EA Sports vyhrať.</p>
-        <p class="review_text">Širší priestor dostal ženský futbal. Jedna vec je hrať za ženy v priateľských zápasoch, iná je pustiť sa s nimi aj do futbalových líg. Medzinárodné tímy sú roky prístupné, teraz sa otvárajú dve ligy: anglická a francúzska, tak si môžete zahrať za ženskú Chelsea či PSG. Nové technológie sa snažia lepšie previesť na obrazovky aj ženské pohyby a jediná nevýhoda je, že možnosti ženského futbalu sa síce rozšírili, ale stále sú limitované na priateľské zápasy, turnaje, sezónu, ale už si dámsky tím nezoberiete ďalej.</p>
-        <p class="review_text">Pre všetky zápasy na veľké ihriská sa aplikuje nová technológia. HyperMotion si zažil vlani premiéru a tento rok prichádza verzia HyperMotion 2, ktorá pokračuje v nastolenom trende realistického podania a snaží sa priniesť najlepšie podané zápasy, minúty pred nimi, počas i po nich. V praxi to znamená, že sa hráči či hráčky snažia reálnejšie behať po trávniku, útočiť či brániť, resp. aj púšťať do súbojov a dotykov. Je tu zachytených veľa pohybov v 90 minútach, gestá v tvári a kopa nových drobných animácií. Autori sa hrdia, že snímali všetkých 22 hráčov počas celého zápasu. Pre vás to znamená, že lopta nie je prilepená na kopačke, ale pohybuje sa ako samostatný objekt, hráči ju vedia spracovať realisticky a aj drobné animácie sú zobrazené so zmyslom pre detail. Platí to pre mužské i ženské zápasy a najmä aj pri finesách ako sú aj prihrávky a strely.</p>
-        <img src="public/images/fifa-23-38317-5993158-1-1070.jpg" alt="fifa" class="review_img">
-        <p class="review_text">Po prvom týždni sú pocity z hry zatiaľ pomerne dobré. Vlaňajší ročník bol azda väčšou revolúciou, ale drobné vylepšenia cítiť. Napríklad zdanlivo drobná fíčurka „AcceleRATE“ sa ukáže byť slušným pomocníkom: keď niektorý hráč dokáže vyštartovať v dobrom čase s loptou do šprintu, nie každý obranca ho zachytí. Tempo hry je pomalšie, no gólov padá pomerne dosť (aj súper sa snaží). Rozdiely medzi jednotlivými stupňami obťažnosti sú veľké – ak sa vám podarí na nižšej excelovať, tá o level vyššia vás vyzve na pár ťažkých zápasov, kým si zvyknete.</p>
-    </article>
+    <?php foreach ($data as $rev) { ?>
+        <article>
+            <h2><?=$rev->getTitle()?></h2>
+            <p class="review_text"><?=$rev->getParagraph1()?></p>
+            <p class="review_text"><?=$rev->getParagraph2()?></p>
+            <p class="review_text"><?=$rev->getParagraph3()?></p>
+            <img src="<?=$rev->getImage()?>" alt="<?=$rev->getImagealt()?>" class="review_img">
+            <p class="review_text"><?=$rev->getParagraph4()?></p>
+        </article>
+    <?php } ?>
 </div>
