@@ -1,7 +1,7 @@
 <?php
 
 use App\Models\Review;
-/** @var \App\Models\Review[] $data */
+/** @var Review $data */
 $review = $data;
 ?>
 
