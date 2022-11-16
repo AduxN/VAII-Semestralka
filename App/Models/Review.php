@@ -175,11 +175,11 @@ class Review extends Model
 
     static public function setTableName(): string
     {
-        return "recenzia";
+        return "reviews";
     }
 
-    static public function setColumnNames(): array
+    static public function setDbColumns(): array
     {
-        return ["id", "title", "description", "paragraph1", "paragraph2", "paragraph3", "paragraph4", "image"];
+        return ["id", "title", "description", "paragraph1", "paragraph2", "paragraph3", "paragraph4", "image", "imagealt"];
     }
 }
