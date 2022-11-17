@@ -9,9 +9,7 @@
 }
 body {
     background-color: #515A5A;
-    margin-top: 0;
-    margin-left: 0;
-    margin-right: 0;
+    margin: 0;
 }
 * {
     text-align: center;
@@ -303,6 +301,15 @@ p.review_text {
     text-decoration: none;
 }
 
+.newarticleform {
+    margin: 5% 20%;
+    padding: 2% 5%;
+    border-style: solid;
+    border-radius: 4% / 2%;
+    border-width: 3px;
+    background-color: #1e1e1e;
+    border-color: #1e1e1e;
+}
 ul {
     padding-inline-start: 0;
 }
