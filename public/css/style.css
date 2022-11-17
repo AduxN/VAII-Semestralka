@@ -43,6 +43,10 @@ body {
         font-size: 16px;
     }
 
+    .review_text {
+        font-size: 16px;
+    }
+
     h1 {
         font-size: 36px;
     }
@@ -89,6 +93,9 @@ body {
         font-size: 18px;
     }
 
+    .review_text {
+        font-size: 18px;
+    }
     .offer {
         font-size: 24px;
         padding: 10px 100px;
@@ -124,6 +131,10 @@ body {
     .news_p {
         padding-left: 10%;
         padding-right: 10%;
+        font-size: 20px;
+    }
+
+    .review_text {
         font-size: 20px;
     }
 
@@ -292,9 +303,8 @@ article {
     display: flex;
     justify-content: center;
 }
-p.review_text {
-    text-align: justify;
-    font-size: 16px;
+.review_text {
+    text-align: center;
     margin: 16px 0;
 }
 
