@@ -17,15 +17,15 @@ class ReviewsController extends AControllerBase
 
     public function article(): Response
     {
-        /*$allReviews = Review::getAll();
-        return  $this->html([
-            'reviews' => $allReviews
-        ]);
-        */
         $id = $this->request()->getValue("id");
-        /*$review = ($id ? Review::getOne($id) : new Review());*/
         $review = Review::getOne($id);
-        /*$review->setTitle($this->request()->getValue('title'));
+        return $this->html($review);
+    }
+
+    public function newArticle(): Response
+    {
+        $review = new Review();
+        $review->setTitle($this->request()->getValue('title'));
         $review->setDescription($this->request()->getValue('description'));
         $review->setParagraph1($this->request()->getValue('paragraph1'));
         $review->setParagraph2($this->request()->getValue('paragraph2'));
@@ -34,7 +34,19 @@ class ReviewsController extends AControllerBase
         $review->setImage($this->request()->getValue('image'));
         $review->setImagealt($this->request()->getValue('imagealt'));
         $review->save();
-        */
-        return $this->html($review);
+        return $this->redirect("?c=reviews"); /* redirect na uvod */
+    }
+
+    public function newArticleForm() {
+        return $this->html(viewName: 'newarticle');
+    }
+
+    public function deleteArticle(): Response {
+        $id = $this->request()->getValue("id");
+        $review = Review::getOne($id);
+        if ($review != null) {
+            $review->delete();
+        }
+        return $this->redirect("?c=reviews"); /* redirect na uvod */
     }
 }
