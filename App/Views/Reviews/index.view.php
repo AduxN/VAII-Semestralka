@@ -5,7 +5,12 @@
 <div class="articles">
     <?php foreach ($data as $rev) { ?>
         <article>
-            <a href="?c=reviews&a=article&id=<?=$rev->getId()?>"><h2><?=$rev->getTitle()?></h2></a>
+            <div class="review_title_div">
+                <a class="review_title" href="?c=reviews&a=article&id=<?=$rev->getId()?>">
+                    <h2 class="review_title" ><?=$rev->getTitle()?></h2>
+                </a>
+            </div>
+
             <img src="<?=$rev->getImageSrc()?>" alt="<?=$rev->getImageAlt()?>" class="review_img">
             <p class="review_text"><?=$rev->getDescription()?></p>
         </article>
