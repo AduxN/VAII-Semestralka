@@ -11,5 +11,8 @@
         </article>
     <?php } ?>
 </div>
-
-<a href="?c=reviews&a=newArticleForm"><button type="button" class="btn btn-primary">Nová recenzia</button></a>
+<div class="newreviewbtn">
+    <a href="?c=reviews&a=newArticleForm">
+        <button type="button" class="btn btn-primary">Nová recenzia</button>
+    </a>
+</div>

@@ -5,15 +5,15 @@ use App\Core\Model;
 
 class Review extends Model
 {
-    protected int $id;
-    protected string $title;
-    protected ?string $description;
-    protected string $paragraph1;
-    protected ?string $paragraph2;
-    protected ?string $paragraph3;
-    protected ?string $paragraph4;
-    protected string $image;
-    protected string $imagealt;
+    protected $id;
+    protected $title;
+    protected $description;
+    protected $paragraph1;
+    protected $paragraph2;
+    protected $paragraph3;
+    protected $paragraph4;
+    protected $image;
+    protected $imagealt;
 
 
 
@@ -30,9 +30,9 @@ class Review extends Model
     }
     */
     /**
-     * @return int
+     * @return mixed
      */
-    public function getId(): int
+    public function getId()
     {
         return $this->id;
     }
@@ -46,9 +46,9 @@ class Review extends Model
     }
 
     /**
-     * @return string
+     * @return mixed
      */
-    public function getTitle(): string
+    public function getTitle()
     {
         return $this->title;
     }
@@ -62,9 +62,9 @@ class Review extends Model
     }
 
     /**
-     * @return string|null
+     * @return mixed
      */
-    public function getDescription(): ?string
+    public function getDescription()
     {
         return $this->description;
     }
@@ -78,9 +78,9 @@ class Review extends Model
     }
 
     /**
-     * @return string
+     * @return mixed
      */
-    public function getParagraph1(): string
+    public function getParagraph1()
     {
         return $this->paragraph1;
     }
@@ -94,9 +94,9 @@ class Review extends Model
     }
 
     /**
-     * @return string|null
+     * @return mixed
      */
-    public function getParagraph2(): ?string
+    public function getParagraph2()
     {
         return $this->paragraph2;
     }
@@ -110,9 +110,9 @@ class Review extends Model
     }
 
     /**
-     * @return string|null
+     * @return mixed
      */
-    public function getParagraph3(): ?string
+    public function getParagraph3()
     {
         return $this->paragraph3;
     }
@@ -126,9 +126,9 @@ class Review extends Model
     }
 
     /**
-     * @return string|null
+     * @return mixed
      */
-    public function getParagraph4(): ?string
+    public function getParagraph4()
     {
         return $this->paragraph4;
     }
@@ -142,9 +142,9 @@ class Review extends Model
     }
 
     /**
-     * @return string
+     * @return mixed
      */
-    public function getImage(): string
+    public function getImage()
     {
         return $this->image;
     }
@@ -158,9 +158,9 @@ class Review extends Model
     }
 
     /**
-     * @return string
+     * @return mixed
      */
-    public function getImagealt(): string
+    public function getImagealt()
     {
         return $this->imagealt;
     }

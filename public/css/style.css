@@ -300,7 +300,11 @@ p.review_text {
     justify-content: center;
     text-decoration: none;
 }
-
+.newreviewbtn {
+    display: flex;
+    justify-content: flex-end;
+    margin: 0 10%;
+}
 .newarticleform {
     margin: 5% 20%;
     padding: 2% 5%;

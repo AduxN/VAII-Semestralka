@@ -24,7 +24,8 @@ class ReviewsController extends AControllerBase
 
     public function newArticle(): Response
     {
-        $review = new Review();
+        $id = $this->request()->getValue("id");
+        $review = ($id ? Review::getOne($id) : new Review());
         $review->setTitle($this->request()->getValue('title'));
         $review->setDescription($this->request()->getValue('description'));
         $review->setParagraph1($this->request()->getValue('paragraph1'));
@@ -38,7 +39,18 @@ class ReviewsController extends AControllerBase
     }
 
     public function newArticleForm() {
-        return $this->html(viewName: 'newarticle');
+        return $this->html(new Review(),'newarticle');
+    }
+
+    public function editArticleForm() {
+        $id = $this->request()->getValue("id");
+//        if ($id != null) {
+        $review = Review::getOne($id);
+        return $this->html($review,'newarticle');
+//        }
+//        else {
+//            return $this->html(new Review(),'newarticle');
+//        }
     }
 
     public function deleteArticle(): Response {
