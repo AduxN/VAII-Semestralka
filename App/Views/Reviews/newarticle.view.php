@@ -4,7 +4,7 @@ use App\Models\Review;
 $review = $data;
 ?>
 
-<form class="newarticleform" method="post" action="?c=reviews&a=newArticle">
+<form id="newarticleform" name="newarticleform" method="post" action="?c=reviews&a=newArticle" onsubmit="return validateArticle()">
     <?php if ($review->getId()) { ?>
         <input type="hidden" name="id" value="<?=$review->getId() ?>">
     <?php } ?>
@@ -46,14 +46,14 @@ $review = $data;
 
     <!-- Image input -->
     <div class="form-outline mb-4">
-        <label class="form-label" for="formImage">Cesta k obrázku</label>
-        <input type="text" id="formImage" class="form-control" name="image" value="<?=$review->getImage()?>"/>
+        <label class="form-label" for="formImageSrc">Cesta k obrázku</label>
+        <input type="text" id="formImageSrc" class="form-control" name="imageSrc" value="<?=$review->getImageSrc()?>"/>
     </div>
 
     <!-- Imagealt input -->
     <div class="form-outline mb-4">
-        <label class="form-label" for="formImagealt">Alternatívny text (ak sa obrázok nezobrazí správne)</label>
-        <input type="text" id="formImagealt" class="form-control" name="imagealt" value="<?=$review->getImagealt()?>"/>
+        <label class="form-label" for="formImageAlt">Alternatívny text (ak sa obrázok nezobrazí správne)</label>
+        <input type="text" id="formImageAlt" class="form-control" name="imageAlt" value="<?=$review->getImageAlt()?>"/>
     </div>
 
     <!-- Submit button -->

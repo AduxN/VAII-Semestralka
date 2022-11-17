@@ -32,8 +32,8 @@ class ReviewsController extends AControllerBase
         $review->setParagraph2($this->request()->getValue('paragraph2'));
         $review->setParagraph3($this->request()->getValue('paragraph3'));
         $review->setParagraph4($this->request()->getValue('paragraph4'));
-        $review->setImage($this->request()->getValue('image'));
-        $review->setImagealt($this->request()->getValue('imagealt'));
+        $review->setImageSrc($this->request()->getValue('imageSrc'));
+        $review->setImageAlt($this->request()->getValue('imageAlt'));
         $review->save();
         return $this->redirect("?c=reviews"); /* redirect na uvod */
     }

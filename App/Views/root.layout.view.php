@@ -18,7 +18,7 @@
             crossorigin="anonymous"></script>
     <link rel="stylesheet" href="public/css/style.css">
     <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Ubuntu:regular,bold&subset=latin-ext">
-    <script src="../../public/js/script.js"></script>
+    <script src="public/js/script.js"></script>
 </head>
 <body>
 <nav>

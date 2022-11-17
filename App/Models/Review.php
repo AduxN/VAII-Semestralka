@@ -12,8 +12,8 @@ class Review extends Model
     protected $paragraph2;
     protected $paragraph3;
     protected $paragraph4;
-    protected $image;
-    protected $imagealt;
+    protected $imageSrc;
+    protected $imageAlt;
 
 
 
@@ -144,33 +144,33 @@ class Review extends Model
     /**
      * @return mixed
      */
-    public function getImage()
+    public function getImageSrc()
     {
-        return $this->image;
+        return $this->imageSrc;
     }
 
     /**
-     * @param string $image
+     * @param string $imageSrc
      */
-    public function setImage(string $image): void
+    public function setImageSrc(string $imageSrc): void
     {
-        $this->image = $image;
+        $this->imageSrc = $imageSrc;
     }
 
     /**
      * @return mixed
      */
-    public function getImagealt()
+    public function getImageAlt()
     {
-        return $this->imagealt;
+        return $this->imageAlt;
     }
 
     /**
-     * @param string $imagealt
+     * @param string $imageAlt
      */
-    public function setImagealt(string $imagealt): void
+    public function setImageAlt(string $imageAlt): void
     {
-        $this->imagealt = $imagealt;
+        $this->imageAlt = $imageAlt;
     }
 
     static public function setTableName(): string
@@ -180,6 +180,6 @@ class Review extends Model
 
     static public function setDbColumns(): array
     {
-        return ["id", "title", "description", "paragraph1", "paragraph2", "paragraph3", "paragraph4", "image", "imagealt"];
+        return ["id", "title", "description", "paragraph1", "paragraph2", "paragraph3", "paragraph4", "imageSrc", "imageAlt"];
     }
 }

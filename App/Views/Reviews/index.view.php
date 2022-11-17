@@ -6,7 +6,7 @@
     <?php foreach ($data as $rev) { ?>
         <article>
             <a href="?c=reviews&a=article&id=<?=$rev->getId()?>"><h2><?=$rev->getTitle()?></h2></a>
-            <img src="<?=$rev->getImage()?>" alt="<?=$rev->getImagealt()?>" class="review_img">
+            <img src="<?=$rev->getImageSrc()?>" alt="<?=$rev->getImageAlt()?>" class="review_img">
             <p class="review_text"><?=$rev->getDescription()?></p>
         </article>
     <?php } ?>
