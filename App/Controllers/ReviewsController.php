@@ -34,6 +34,16 @@ class ReviewsController extends AControllerBase
         $review->setParagraph4($this->request()->getValue('paragraph4'));
         $review->setImageSrc($this->request()->getValue('imageSrc'));
         $review->setImageAlt($this->request()->getValue('imageAlt'));
+
+        // form validation PHP
+        $title = $_POST['title'];
+        $description = $_POST['description'];
+        $paragraph1 = $_POST['paragraph1'];
+
+        if ($title == "" || strlen($title) > 255 || $description == "" || strlen($description) > 1000 || $paragraph1 == "" || strlen($paragraph1) > 2000) {
+            return $this->redirect("?c=reviews&a=error");
+        }
+
         $review->save();
         return $this->redirect("?c=reviews"); /* redirect na uvod */
     }
@@ -60,5 +70,10 @@ class ReviewsController extends AControllerBase
             $review->delete();
         }
         return $this->redirect("?c=reviews"); /* redirect na uvod */
+    }
+
+    public function error(): Response
+    {
+        return $this->html();
     }
 }
