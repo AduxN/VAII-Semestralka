@@ -190,8 +190,13 @@ body {
     margin-right: auto;
     border-radius: 50%;
     width: 32px;
+    box-shadow:  0 0 15px 0 rgba(8,129,163,0.5),
+    0 0 10px 0 rgba(8,129,163,0.45);
 }
-
+.gaming_img, .logotext_img {
+    box-shadow:  0 0 15px 0 rgba(8,129,163,0.5),
+    0 0 30px 0 rgba(8,129,163,0.45);
+}
 .menu a {
     font-size: larger;
     font-weight: bold;
@@ -211,7 +216,7 @@ h1 {
 }
 
 h3 {
-    margin-bottom: 24px;
+    margin-bottom: 28px;
 }
 
 .offersTitle {
@@ -350,8 +355,13 @@ article {
     border-width: 3px;
     background-color: #1e1e1e;
     border-color: #1e1e1e;
+    box-shadow:  0 6px 15px 0 rgba(13, 110, 253, 0.5),
+    0 6px 30px 0 rgba(13, 110, 253, 0.45);
 }
 
+.newarticleForm {
+    border-radius: 3%;
+}
 .loginForm {
     border-radius: 2% / 4%;
 }

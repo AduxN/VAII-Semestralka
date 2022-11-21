@@ -2,7 +2,7 @@
 $layout = 'auth';
 /** @var Array $data */
 ?>
-<form class="signInForm form">
+<form class="signInForm form rounded-lg">
     <h3>Registrácia</h3>
     <!-- Login input -->
     <div class="form-outline mb-4">
