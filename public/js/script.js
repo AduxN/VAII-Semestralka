@@ -41,7 +41,6 @@ function validateArticle() {
 
 function hamburgerMenu() {
     let links = document.getElementById("links")
-    // let dm = document.getElementsByClassName("defaultmenu")
     let btns = document.getElementById("btns")
 
     if (links.style.display === "block" && btns.style.display === "block") {
