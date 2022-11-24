@@ -38,3 +38,18 @@ function validateArticle() {
     }
     return true;
 }
+
+function hamburgerMenu() {
+    let links = document.getElementById("links")
+    // let dm = document.getElementsByClassName("defaultmenu")
+    let btns = document.getElementById("btns")
+
+    if (links.style.display === "block" && btns.style.display === "block") {
+        links.style.display = "none";
+        btns.style.display = "none";
+
+    } else {
+        links.style.display = "block";
+        btns.style.display = "block";
+    }
+}

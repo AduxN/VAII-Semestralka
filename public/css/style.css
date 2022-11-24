@@ -1,3 +1,4 @@
+
 @keyframes hover_color {
     0%   {color: #2E86C1;}
     16%  {color: #17A589;}
@@ -7,10 +8,12 @@
     83%  {color: #17A589;}
     100% {color: #2E86C1;}
 }
+
 body {
     background-color: #515A5A;
     margin: 0;
 }
+
 * {
     text-align: center;
     font-family: Ubuntu, serif;
@@ -18,16 +21,10 @@ body {
 }
 /*mobile*/
 @media only screen and (max-width: 600px) {
-    .menu {
-        flex-direction: column;
-        row-gap: 10px;
-        padding: 16px 0;
-    }
 
-    .defaultmenu {
-        gap: 20px;
-        flex-direction: column;
-    }
+    /*.web-content {*/
+    /*    margin-top: 60px;*/
+    /*}*/
 
     article {
         margin-left: 0;
@@ -62,16 +59,7 @@ body {
 }
 
 /*tablet*/
-@media only screen and (min-width: 600px) and (max-width: 900px) {
-    .menu {
-        flex-direction: column;
-        row-gap: 24px;
-        padding: 16px 0;
-    }
-
-    .defaultmenu {
-        gap: 40px;
-    }
+@media only screen and (min-width: 601px) and (max-width: 900px) {
 
     .articles {
         margin: 0;
@@ -104,14 +92,7 @@ body {
 
 /*desktop*/
 @media only screen and (min-width: 900px) {
-    .menu {
-        flex-direction: row;
-        padding: 10px 5%;
-    }
 
-    .defaultmenu {
-        gap: 60px;
-    }
 
     article {
         margin-left: 2%;
@@ -148,67 +129,12 @@ body {
     }
 }
 
-/* cele menu */
-.menu {
-    text-align: center;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    list-style-type: none;
-    background-color: #1e1e1e;
-    margin-top: 0;
-    overflow: hidden;
 
-}
-
-/* menu bez prihlasenia a registracie */
-.defaultmenu {
-    display: flex;
-    justify-content: space-evenly;
-    text-align: center;
-    list-style-type: none;
-    background-color: #1e1e1e;
-
-    margin-top: 0;
-    padding: 10px 16px;
-    overflow: hidden;
-    white-space: nowrap;
-}
-
-/* prihlasenie a registracia */
-.btns {
-    display: flex;
-    justify-content: space-between;
-    overflow: hidden;
-    white-space: nowrap;
-    gap: 10px;
-}
-
-.logo_img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    border-radius: 50%;
-    width: 32px;
-    box-shadow:  0 0 15px 0 rgba(8,129,163,0.5),
-    0 0 10px 0 rgba(8,129,163,0.45);
-}
 .gaming_img, .logotext_img {
     box-shadow:  0 0 15px 0 rgba(8,129,163,0.5),
     0 0 30px 0 rgba(8,129,163,0.45);
 }
-.menu a {
-    font-size: larger;
-    font-weight: bold;
-    text-decoration: none;
-    color: #2E86C1;
-}
 
-.menu a:hover {
-    animation-name: hover_color;
-    animation-duration:4s;
-    animation-iteration-count: infinite;
-}
 
 h1 {
     padding: 24px 0;
@@ -222,6 +148,7 @@ h3 {
 .offersTitle {
     margin: 0 16px;
 }
+
 .gaming_img {
     border-radius: 2%;
     max-width: 80%;
@@ -325,7 +252,8 @@ article {
     font-weight: bold;
     text-decoration: none;
     display:flex;
-    margin-right: auto;
+    align-self: center;
+
 }
 
 .articlebtns {

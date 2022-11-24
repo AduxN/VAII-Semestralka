@@ -1,0 +1,179 @@
+
+/*mobile*/
+@media only screen and (max-width: 600px) {
+
+    .menu a {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .home_menu {
+        margin-left: 32px;
+    }
+
+    .menu a.icon {
+        background: #1e1e1e;
+        display: block;
+        margin-right: 32px;
+        margin-top: 10px;
+        align-self: flex-start;
+        padding: 5px 15px;
+    }
+
+    .logo_img {
+        align-self: flex-start;
+    }
+
+    .defaultmenu {
+        margin-top: auto;
+        left:0;
+        width:100%;
+    }
+
+    .btns {
+        display: none;
+
+    }
+
+    .btn {
+        margin-bottom: 10px;
+
+    }
+
+    .links {
+        display: none;
+        flex-direction: column;
+        row-gap: 10px;
+        margin-top: 48px;
+    }
+
+    .item {
+        padding: 12px;
+    }
+}
+
+/*tablet*/
+@media only screen and (min-width: 601px) and (max-width: 900px) {
+
+    .menu {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
+        row-gap: 24px;
+        padding: 16px 0;
+    }
+
+    .menu a {
+        font-size: larger;
+    }
+
+    .menu a.icon {
+        display: none;
+    }
+
+    .defaultmenu {
+        gap: 40px;
+    }
+
+    .btns {
+        display: flex;
+        justify-content: space-between;
+        overflow: hidden;
+        white-space: nowrap;
+        gap: 10px;
+    }
+
+    .links {
+        display: flex;
+        justify-content: space-evenly;
+        text-align: center;
+        gap: 40px
+    }
+}
+
+/*desktop*/
+@media only screen and (min-width: 900px) {
+
+    .menu {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: row;
+        padding: 10px 5%;
+    }
+
+    .menu a {
+        font-size: larger;
+    }
+
+    .menu a.icon {
+        display: none;
+    }
+
+    .defaultmenu {
+        gap: 60px;
+    }
+
+    /* prihlasenie a registracia */
+    .btns {
+        display: flex;
+        justify-content: space-between;
+        overflow: hidden;
+        white-space: nowrap;
+        gap: 10px;
+    }
+
+    .links {
+        display: flex;
+        justify-content: space-evenly;
+        text-align: center;
+        gap: 60px;
+    }
+}
+
+/* cele menu */
+.menu {
+    text-align: center;
+    list-style-type: none;
+    background-color: #1e1e1e;
+    overflow: hidden;
+    margin-bottom: auto;
+}
+
+/* menu bez prihlasenia a registracie */
+.defaultmenu {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    list-style-type: none;
+    background-color: #1e1e1e;
+    margin-bottom: auto;
+    padding: 10px 16px;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+
+
+.menu a {
+    font-weight: bold;
+    text-decoration: none;
+    color: #2E86C1;
+}
+
+.menu a:hover {
+    animation-name: hover_color;
+    animation-duration:4s;
+    animation-iteration-count: infinite;
+}
+
+.logo_img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 50%;
+    width: 32px;
+    box-shadow:  0 0 15px 0 rgba(8,129,163,0.5),
+    0 0 10px 0 rgba(8,129,163,0.45);
+}

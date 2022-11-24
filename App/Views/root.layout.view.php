@@ -16,29 +16,31 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
             integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
             crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="public/css/style.css">
     <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Ubuntu:regular,bold&subset=latin-ext">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="public/css/style.css">
+    <link rel="stylesheet" href="public/css/menus.css">
     <script src="public/js/script.js"></script>
 </head>
 <body>
 <nav>
-    <ul class="menu">
-        <li>
-            <div class="defaultmenu">
-                <a href="?c=home" class="item"><img class="logo_img" src="public/images/logo.png" alt="GameCommunity"></a>
+    <div class="menu">
+        <div class="defaultmenu">
+            <a href="?c=home" class="item home_menu active"><img class="logo_img" src="public/images/logo.png" alt="GameCommunity"></a>
+            <div class="links" id="links">
                 <a href="?c=news" class="item">Novinky</a>
                 <a href="?c=reviews" class="item">Recenzie</a>
                 <a href="?c=offers" class="item">Špeciálne ponuky</a>
             </div>
-        </li>
-        <li>
-            <div class="btns">
-
-                <a href="?c=auth&a=login"><button type="button" class="btn btn-primary loginbtn">Prihlás sa</button></a>
-                <a href="?c=auth&a=signin"><button type="button" class="btn btn-primary signinbtn">Registruj sa</button></a>
-            </div>
-        </li>
-    </ul>
+            <a href="javascript:void(0);" class="icon" onclick="hamburgerMenu()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </div>
+        <div class="btns" id="btns">
+            <a href="?c=auth&a=login" class="btna"><button type="button" class="btn btn-primary loginbtn">Prihlás sa</button></a>
+            <a href="?c=auth&a=signin" class="btna"><button type="button" class="btn btn-primary signinbtn">Registruj sa</button></a>
+        </div>
+    </div>
 </nav>
 <div class="container-fluid mt-3">
     <div class="web-content">
