@@ -38,7 +38,7 @@
         </div>
         <div class="btns" id="btns">
             <a href="?c=auth&a=login" class="btna"><button type="button" class="btn btn-primary loginbtn">Prihlás sa</button></a>
-            <a href="?c=auth&a=signin" class="btna"><button type="button" class="btn btn-primary signinbtn">Registruj sa</button></a>
+            <a href="?c=auth&a=signInForm" class="btna"><button type="button" class="btn btn-primary signinbtn">Registruj sa</button></a>
         </div>
     </div>
 </nav>

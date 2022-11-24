@@ -5,11 +5,11 @@ use App\Core\Model;
 
 class Account extends Model
 {
-    protected int $id;
-    protected string $login;
-    protected string $password;
-    protected ?string $name;
-    protected string $email;
+    protected $id;
+    protected $login;
+    protected $password;
+    protected $name;
+    protected $email;
 
     /*public function __construct(int $id, string $login, string $password, ?string $name, string $email)
     {
@@ -23,7 +23,7 @@ class Account extends Model
     /**
      * @return int
      */
-    public function getId() : int
+    public function getId()
     {
         return $this->id;
     }
@@ -31,7 +31,7 @@ class Account extends Model
     /**
      * @return string|null
      */
-    public function getLogin(): ?string
+    public function getLogin()
     {
         return $this->login;
     }
@@ -39,7 +39,7 @@ class Account extends Model
     /**
      * @return string|null
      */
-    public function getPassword(): ?string
+    public function getPassword()
     {
         return $this->password;
     }
@@ -47,7 +47,7 @@ class Account extends Model
     /**
      * @return string|null
      */
-    public function getName(): ?string
+    public function getName()
     {
         return $this->name;
     }
@@ -55,7 +55,7 @@ class Account extends Model
     /**
      * @return string|null
      */
-    public function getEmail(): ?string
+    public function getEmail()
     {
         return $this->email;
     }
@@ -63,7 +63,7 @@ class Account extends Model
     /**
      * @param int $id
      */
-    public function setId($id): void
+    public function setId($id)
     {
         $this->id = $id;
     }
@@ -71,7 +71,7 @@ class Account extends Model
     /**
      * @param string|null $login
      */
-    public function setLogin(?string $login): void
+    public function setLogin(?string $login)
     {
         $this->login = $login;
     }
@@ -79,7 +79,7 @@ class Account extends Model
     /**
      * @param string|null $password
      */
-    public function setPassword(?string $password): void
+    public function setPassword(?string $password)
     {
         $this->password = $password;
     }
@@ -87,7 +87,7 @@ class Account extends Model
     /**
      * @param string|null $name
      */
-    public function setName(?string $name): void
+    public function setName(?string $name)
     {
         $this->name = $name;
     }
@@ -95,7 +95,7 @@ class Account extends Model
     /**
      * @param string|null $email
      */
-    public function setEmail(?string $email): void
+    public function setEmail(?string $email)
     {
         $this->email = $email;
     }

@@ -4,7 +4,7 @@ use App\Models\Review;
 $review = $data;
 ?>
 
-<form class="newarticleForm form rounded-lg" name="newarticleform" method="post" action="?c=reviews&a=newArticle" > <!--onsubmit="return validateArticle()"-->
+<form class="newarticleForm form rounded-lg" name="newarticleform" method="post" action="?c=reviews&a=newArticle" onsubmit="return validateArticle()">
     <?php if ($review->getId()) { ?>
         <input type="hidden" name="id" value="<?=$review->getId() ?>">
     <?php } ?>

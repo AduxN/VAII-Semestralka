@@ -2,38 +2,41 @@
 $layout = 'auth';
 /** @var Array $data */
 ?>
-<form class="signInForm form rounded-lg">
+<form class="signInForm form rounded-lg" method="post" action="?c=auth&a=signIn">
+    <?php if ($data->getId()) { ?>
+    <input type="hidden" name="id" value="<?=$data->getId() ?>">
+    <?php } ?>
     <h3>Registrácia</h3>
     <!-- Login input -->
     <div class="form-outline mb-4">
-        <input type="text" id="formLogin" class="form-control" />
+        <input type="text" id="formLogin" class="form-control" name="login" value="<?=$data->getLogin()?>"/>
         <label class="form-label" for="formLogin">Prihlasovacie meno</label>
     </div>
 
     <!-- Password input -->
     <div class="form-outline mb-4">
-        <input type="password" id="formPassword" class="form-control" />
+        <input type="password" id="formPassword" class="form-control" name="password" value="<?=$data->getPassword()?>"/>
         <label class="form-label" for="formPassword">Heslo</label>
     </div>
 
     <!-- Password check input -->
     <div class="form-outline mb-4">
-        <input type="password" id="formPassCheck" class="form-control" />
+        <input type="password" id="formPassCheck" class="form-control" name="password" value="<?=$data->getPassword()?>"/>
         <label class="form-label" for="formPassCheck">Kontrola hesla</label>
     </div>
 
     <!-- Name input -->
     <div class="form-outline mb-4">
-        <input type="text" id="formName" class="form-control" />
+        <input type="text" id="formName" class="form-control" name="name" value="<?=$data->getName()?>"/>
         <label class="form-label" for="formName">Meno</label>
     </div>
 
     <!-- Email input -->
     <div class="form-outline mb-4">
-        <input type="email" id="formEmail" class="form-control" />
+        <input type="email" id="formEmail" class="form-control" name="email" value="<?=$data->getEmail()?>"/>
         <label class="form-label" for="formEmail">Email</label>
     </div>
 
     <!-- Submit button -->
-    <button type="button" class="btn btn-primary btn-block mb-4">Registruj sa</button>
+    <button type="submit" class="btn btn-primary btn-block mb-4">Registruj sa</button>
 </form>
