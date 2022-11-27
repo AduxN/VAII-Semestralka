@@ -81,7 +81,6 @@ class ReviewsController extends AControllerBase
         $paragraph2 = $_POST['paragraph2'];
         $paragraph3 = $_POST['paragraph3'];
         $paragraph4 = $_POST['paragraph4'];
-        $imageSrc = $_POST['imageSrc'];
         $imageAlt = $_POST['imageAlt'];
 
         if ($title == "" || strlen($title) > 255 || $description == "" || strlen($description) > 1000 || $paragraph1 == "" || strlen($paragraph1) > 2000) {
@@ -90,7 +89,7 @@ class ReviewsController extends AControllerBase
         if (strlen($paragraph2) > 2000 || strlen($paragraph3) > 2000 || strlen($paragraph4) > 2000) {
             return false;
         }
-        if (strlen($imageSrc > 255) || strlen($imageAlt) > 30) {
+        if (strlen($imageAlt) > 30) {
             return false;
         }
         return true;

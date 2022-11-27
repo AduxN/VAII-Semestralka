@@ -32,7 +32,7 @@ function validateArticle() {
         alert("Minimálne jeden z odsekov je príliš dlhý");
         return false;
     }
-    if (imageSrc.length > 255 || imageAlt.length > 30) {
+    if (imageSrc.length > 2000 || imageAlt.length > 30) {
         alert("Minimálne jeden z údajov o obrázku je príliš dlhý");
         return false;
     }
