@@ -32,7 +32,8 @@
 
     .btns {
         display: none;
-
+        gap: 10px;
+        justify-content: center;
     }
 
     .btn {
@@ -88,7 +89,7 @@
         display: flex;
         justify-content: space-evenly;
         text-align: center;
-        gap: 40px
+        gap: 40px;
     }
 }
 
@@ -155,7 +156,10 @@
 }
 
 
-
+.btn {
+    display: flex;
+    justify-self: center;
+}
 .menu a {
     font-weight: bold;
     text-decoration: none;

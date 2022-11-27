@@ -40,15 +40,28 @@ function validateArticle() {
 }
 
 function hamburgerMenu() {
-    let links = document.getElementById("links")
-    let btns = document.getElementById("btns")
+    let links = document.getElementById("links");
+    let btns = document.getElementById("btns");
 
-    if (links.style.display === "block" && btns.style.display === "block") {
+    if (links.style.display === "flex" && btns.style.display === "flex") {
         links.style.display = "none";
         btns.style.display = "none";
-
     } else {
-        links.style.display = "block";
-        btns.style.display = "block";
+        links.style.display = "flex";
+        btns.style.display = "flex";
+    }
+}
+
+function resizeRefresh() {
+    let links = document.getElementById("links");
+    let btns = document.getElementById("btns");
+    let viewportWidth = window.innerWidth;
+
+    if (viewportWidth > 600 && links.style.display === "none" && btns.style.display === "none") {
+        links.style.display = "flex";
+        btns.style.display = "flex";
+    } else if (viewportWidth < 601 && links.style.display === "flex" && btns.style.display === "flex") {
+        links.style.display = "none";
+        btns.style.display = "none";
     }
 }
