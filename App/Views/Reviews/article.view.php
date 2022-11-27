@@ -5,8 +5,8 @@ use App\Models\Review;
 $review = $data;
 ?>
 
-<div class="articles">
-    <article>
+<div class="openArticles">
+    <article class="openArticle">
         <h2><?=$review->getTitle()?></h2>
         <p class="review_text"><?=$review->getParagraph1()?></p>
         <p class="review_text"><?=$review->getParagraph2()?></p>

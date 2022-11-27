@@ -2,9 +2,9 @@
 ?>
 <h1>Recenzie</h1>
 
-<div class="articles">
+<div class="closedArticles">
     <?php foreach ($data as $rev) { ?>
-        <article>
+        <article class="closedArticle">
             <div class="review_title_div">
                 <a class="review_title" href="?c=reviews&a=article&id=<?=$rev->getId()?>">
                     <h2 class="review_title" ><?=$rev->getTitle()?></h2>
