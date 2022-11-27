@@ -54,16 +54,13 @@ class AuthController extends AControllerBase
 
 
     public function signInForm() {
-        return $this->html(new Account(),'signin');
+        return $this->html(new Account(),'signIn');
     }
 
-    /**
-     * Register a user
-     * @return \App\Core\Responses\RedirectResponse|\App\Core\Responses\ViewResponse
-     */
+
     public function signIn(): Response
     {
-        $id = $this->request()->getValue("id");
+//        $id = $this->request()->getValue("id");
         if (!empty($_POST['login']) && !empty($_POST['email']) && !empty($_POST['password'])) {
             $login = $_POST['login'];
             $password = $_POST['password'];
@@ -80,9 +77,10 @@ class AuthController extends AControllerBase
                 }
             }
 
-            $pass = password_hash($password, PASSWORD_DEFAULT);
+
             $account = new Account();
             $account->setLogin($login);
+            $pass = password_hash($password, PASSWORD_DEFAULT);
             $account->setPassword($pass);
             $account->setName($name);
             $account->setEmail($email);

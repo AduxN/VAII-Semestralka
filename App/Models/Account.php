@@ -102,7 +102,7 @@ class Account extends Model
 
     static public function setTableName(): string
     {
-        return "ucet";
+        return "accounts";
     }
 
     static public function setColumnNames(): array
