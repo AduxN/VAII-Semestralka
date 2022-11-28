@@ -1,6 +1,9 @@
 <?php
 /** @var string $contentHTML */
-/** @var \App\Core\IAuthenticator $auth */
+/** @var IAuthenticator $auth */
+
+use App\Core\IAuthenticator;
+
 ?>
 <!DOCTYPE html>
 <html lang="sk">
@@ -37,8 +40,13 @@
             </a>
         </div>
         <div class="btns" id="btns">
-            <a href="?c=auth&a=login" class="btna"><button type="button" class="btn btn-primary loginbtn">Prihlás sa</button></a>
-            <a href="?c=auth&a=signInForm" class="btna"><button type="button" class="btn btn-primary signinbtn">Registruj sa</button></a>
+            <?php if ($auth->isLogged()) { ?>
+                <h3><?= $auth->getLoggedUserName() ?></h3>
+                <a href="?c=auth&a=logout" class="btna"><button type="button" class="btn btn-primary logoutbtn">Odhlás sa</button></a>
+            <?php } else { ?>
+                <a href="?c=auth&a=login" class="btna"><button type="button" class="btn btn-primary loginbtn">Prihlás sa</button></a>
+                <a href="?c=auth&a=signInForm" class="btna"><button type="button" class="btn btn-primary signinbtn">Registruj sa</button></a>
+            <?php } ?>
         </div>
     </div>
 </nav>
