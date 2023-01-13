@@ -8,7 +8,7 @@ class News extends Model
     protected $id;
     protected $title;
     protected $description;
-    protected $summary;
+    protected $summ;
     protected $content;
 
     /**
@@ -64,7 +64,7 @@ class News extends Model
      */
     public function getSummary()
     {
-        return $this->summary;
+        return $this->summ;
     }
 
     /**
@@ -72,7 +72,7 @@ class News extends Model
      */
     public function setSummary($summary): void
     {
-        $this->summary = $summary;
+        $this->summ = $summary;
     }
 
     /**
@@ -98,6 +98,6 @@ class News extends Model
 
     static public function setDbColumns(): array
     {
-        return ["id", "title", "description", "summary", "content"];
+        return ["id", "title", "description", "summ", "content"];
     }
 }

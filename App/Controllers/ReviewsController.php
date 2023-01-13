@@ -50,13 +50,9 @@ class ReviewsController extends AControllerBase
 
     public function editArticleForm() {
         $id = $this->request()->getValue("id");
-//        if ($id != null) {
         $review = Review::getOne($id);
         return $this->html($review,'newarticle');
-//        }
-//        else {
-//            return $this->html(new Review(),'newarticle');
-//        }
+
     }
 
     public function deleteArticle(): Response {

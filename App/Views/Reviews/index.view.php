@@ -2,6 +2,10 @@
 ?>
 <h1>Recenzie</h1>
 
+<div class="searchInput">
+    <input type="text" id="searchInput" class="form-control" name="searchInput" placeholder="Nájdi recenziu"/>
+</div>
+
 <div class="closedArticles">
     <?php foreach ($data as $rev) { ?>
         <article class="closedArticle">

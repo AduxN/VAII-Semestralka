@@ -321,3 +321,9 @@ hr {
 ul {
     padding-inline-start: 0;
 }
+
+.searchInput {
+    /*width: 300px;*/
+    padding: 0 20%;
+    margin-bottom: 16px;
+}
