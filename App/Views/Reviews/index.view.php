@@ -25,7 +25,7 @@ use App\Models\Review;
         </article>
     <?php } ?>
 </div>
-<?php if ($auth->isLogged()) { ?>
+<?php if ($auth->isLogged() && $auth->getLoggedUserId() == 10) { ?>
     <div class="newreviewbtn">
         <a href="?c=reviews&a=newArticleForm">
             <button type="button" class="btn btn-primary">Nová recenzia</button>

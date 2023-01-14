@@ -15,7 +15,7 @@ $hw = $data;
 
         <img src="<?=$hw->getImageSrc()?>" alt="<?=$hw->getImageAlt()?>" class="hw_img">
         <p class="hw_text"><?=$hw->getParagraph2()?></p>
-        <?php if ($auth->isLogged()) { ?>
+        <?php if ($auth->isLogged() && $auth->getLoggedUserId() == 10) { ?>
             <div class="articlebtns">
                 <a href="?c=hardware&a=editArticleForm&id=<?=$hw->getId()?>" class="btn btn-primary articlebtn">E</a>
                 <a href="?c=hardware&a=deleteArticle&id=<?=$hw->getId()?>" onclick="return confirm('Článok bude zmazaný')" class="btn btn-danger articlebtn">X</a>

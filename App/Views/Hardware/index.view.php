@@ -25,7 +25,7 @@ use App\Models\Hardware;
             </article>
         <?php } ?>
     </div>
-<?php if ($auth->isLogged()) { ?>
+<?php if ($auth->isLogged() && $auth->getLoggedUserId() == 10) { ?>
     <div class="newhwbtn">
         <a href="?c=hardware&a=newArticleForm">
             <button type="button" class="btn btn-primary">Nový článok</button>

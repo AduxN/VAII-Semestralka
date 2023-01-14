@@ -5,8 +5,12 @@
         <div class="col">
             <div>
                 Vitaj, <strong><?= $auth->getLoggedUserName() ?></strong>!<br><br>
-                Táto časť aplikácie je prístupná len po prihlásení.
             </div>
+            <?php if ($auth->isLogged() && $auth->getLoggedUserId() == 10) { ?>
+                <div>
+                    <strong>Admin práva povolené.</strong>
+                </div>
+            <?php } ?>
         </div>
     </div>
 </div>
