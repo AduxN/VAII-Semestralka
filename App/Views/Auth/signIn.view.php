@@ -1,6 +1,9 @@
 <?php
+
+use App\Models\Account;
+
 $layout = 'auth';
-/** @var Array $data */
+/** @var Account[] $data */
 ?>
 
 <form class="signInForm form rounded-lg" method="post" action="?c=auth&a=signIn">
@@ -41,9 +44,23 @@ $layout = 'auth';
 
     <!-- Error check -->
     <?php
-    if ($data['error'] != "") { ?>
+    //if ($data['error'] != "") { ?>
         <div>
-            <?= $data['error'] ?>
+            <?php //=$data['error'] ?>
         </div>
-    <?php } ?>
+    <?php //} ?>
+
+    <?php //if (isset($data->error)) { ?>
+        <?php //if ($data['error'] != "") { ?>
+            <div>
+                <?php //= $data['error'] ?>
+            </div>
+        <?php //} ?>
+    <?php //} ?>
+
+    <div>
+        <?php foreach ($data as $err) { ?>
+            <?=$err?>
+        <?php } ?>
+    </div>
 </form>

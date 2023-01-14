@@ -10,6 +10,7 @@ class Account extends Model
     protected string $password;
     protected string $name;
     protected string $email;
+//    protected string $error;
 
     public function __construct($login = '',$password = '',$name = '',$email = '')
     {
@@ -17,6 +18,7 @@ class Account extends Model
         $this->password = $password;
         $this->name = $name;
         $this->email = $email;
+//        $this->error = "";
     }
 
 
@@ -49,7 +51,10 @@ class Account extends Model
         return $this->email;
     }
 
-
+//    public function getError()
+//    {
+//        return $this->error;
+//    }
 
     public function setId($id)
     {
@@ -79,6 +84,11 @@ class Account extends Model
     {
         $this->email = $email;
     }
+
+//    public function setError($error)
+//    {
+//        $this->error = $error;
+//    }
 
     static public function setTableName(): string
     {
