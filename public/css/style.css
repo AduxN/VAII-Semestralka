@@ -318,7 +318,7 @@ hr {
     text-decoration: none;
     margin: 0 12px;
 }
-.newreviewbtn, .newpostbtn, .newhwbutton {
+.newreviewbtn, .newpostbtn, .newhwbtn {
     display: flex;
     justify-content: flex-end;
     margin: 0 10%;

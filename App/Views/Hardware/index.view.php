@@ -8,10 +8,10 @@ use App\Models\Hardware;
     <h1>Hardvér</h1>
 
     <div class="searchInput">
-        <input type="text" id="searchInput" class="form-control" name="searchInput" placeholder="Nájdi článok"/>
+        <input type="text" id="searchInput" class="form-control" name="searchInput" placeholder="Nájdi článok" onkeyup="getArticles(this.value, false)"/>
     </div>
 
-    <div class="closedArticles">
+    <div class="closedArticles" id="closedHW">
         <?php foreach ($data as $hw) { ?>
             <article class="closedArticle">
                 <div class="hw_title_div">

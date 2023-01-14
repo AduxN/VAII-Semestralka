@@ -3,6 +3,7 @@
 namespace App\Controllers;
 
 use App\Core\AControllerBase;
+use App\Core\Responses\JsonResponse;
 use App\Core\Responses\Response;
 use App\Models\Hardware;
 
@@ -83,4 +84,13 @@ class HardwareController extends AControllerBase
         return true;
     }
 
+    /**
+     * @return JsonResponse
+     * @throws \Exception
+     */
+    public function hardware() : JsonResponse
+    {
+        $all = Hardware::getAll();
+        return $this->json($all);
+    }
 }

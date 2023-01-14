@@ -3,6 +3,7 @@
 namespace App\Controllers;
 
 use App\Core\AControllerBase;
+use App\Core\Responses\JsonResponse;
 use App\Core\Responses\Response;
 use App\Models\Review;
 
@@ -86,4 +87,13 @@ class ReviewsController extends AControllerBase
         return true;
     }
 
+    /**
+     * @return JsonResponse
+     * @throws \Exception
+     */
+    public function reviews() : JsonResponse
+    {
+        $all = Review::getAll();
+        return $this->json($all);
+    }
 }

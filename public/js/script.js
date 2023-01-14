@@ -142,32 +142,66 @@ function resizeRefresh() {
     }
 }
 
-//TODO: AJAX - needs updates
-const searchInput = document.getElementById('searchInput');
-
-searchInput.addEventListener('input', getArticles);
-
-async function getArticles() {
+async function getArticles(searchTerm, reviews) {
     // Send a request to the PHP script to get the articles from the database
-    const response = await fetch('https://example.com/get-articles.php');
+    let response;
+    console.log(searchTerm);
+
+    if (reviews) {
+        response = await fetch("?c=reviews&a=reviews");
+    } else {
+        response = await fetch("?c=hardware&a=hardware");
+    }
+
     const articles = await response.json();
 
     // Filter the articles based on the search term
-    const searchTerm = searchInput.value;
-    const filteredArticles = articles.filter(article => article.title.includes(searchTerm));
+    const filteredArticles = articles.filter(article => article.title.toLowerCase().includes(searchTerm.toLowerCase()));
 
     // Display the filtered articles
-    displayArticles(filteredArticles);
+    displayArticles(filteredArticles, reviews);
 }
 
-function displayArticles(articles) {
-    // Clear the existing articles
-    document.getElementById('articles').innerHTML = '';
+function displayArticles(articles, reviews) {
+    if (reviews) {
+        // Clear the existing articles
+        document.getElementById('closedReviews').innerHTML = '';
 
-    // Add the filtered articles to the page
-    for (const article of articles) {
-        const articleElement = document.createElement('div');
-        articleElement.innerHTML = `<h2>${article.title}</h2><p>${article.content}</p>`;
-        document.getElementById('articles').appendChild(articleElement);
+        // Add the filtered articles to the page
+        for (const article of articles) {
+            //<div class="closedArticles" id="closedReviews">
+            const articleElement = document.createElement('article');
+            articleElement.classList.add("closedArticle");
+            articleElement.innerHTML =
+                    `<div class="review_title_div">
+                        <a class="review_title" href="?c=reviews&a=article&id=${article.id}">
+                            <h2 class="review_title">${article.title}</h2>
+                        </a>
+                    </div>
+
+                    <img src="${article.imageSrc}" alt="${article.imageAlt}" class="review_img">
+                        <p class="review_text">${article.description}</p>`
+            document.getElementById('closedReviews').appendChild(articleElement);
+        }
+    } else {
+        // Clear the existing articles
+        document.getElementById('closedHW').innerHTML = '';
+
+        // Add the filtered articles to the page
+        for (const article of articles) {
+            const articleElement = document.createElement('article');
+            articleElement.classList.add("closedArticle");
+            articleElement.innerHTML =
+                `<div class="hw_title_div">
+                        <a class="hw_title" href="?c=hardware&a=article&id=${article.id}">
+                            <h2 class="hw_title">${article.title}</h2>
+                        </a>
+                    </div>
+
+                    <img src="${article.imageSrc}" alt="${article.imageAlt}" class="hw_img">
+                        <p class="hw_text">${article.description}</p>`
+            document.getElementById('closedHW').appendChild(articleElement);
+        }
     }
+
 }

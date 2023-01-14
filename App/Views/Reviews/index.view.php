@@ -8,10 +8,10 @@ use App\Models\Review;
 <h1>Recenzie</h1>
 
 <div class="searchInput">
-    <input type="text" id="searchInput" class="form-control" name="searchInput" placeholder="Nájdi recenziu"/>
+    <input type="text" id="searchInput" class="form-control" name="searchInput" placeholder="Nájdi recenziu" onkeyup="getArticles(this.value, true)"/>
 </div>
 
-<div class="closedArticles">
+<div class="closedArticles" id="closedReviews">
     <?php foreach ($data as $rev) { ?>
         <article class="closedArticle">
             <div class="review_title_div">
