@@ -8,6 +8,7 @@ class Offer extends Model
     protected $id;
     protected $title;
     protected $link;
+    protected $special;
 
     /**
      * @return mixed
@@ -57,6 +58,22 @@ class Offer extends Model
         $this->link = $link;
     }
 
+    /**
+     * @return mixed
+     */
+    public function isSpecial()
+    {
+        return $this->special;
+    }
+
+    /**
+     * @param mixed $special
+     */
+    public function setSpecial($special): void
+    {
+        $this->special = $special;
+    }
+
     static public function setTableName(): string
     {
         return "offers";
@@ -64,7 +81,7 @@ class Offer extends Model
 
     static public function setDbColumns(): array
     {
-        return ["id", "title", "link"];
+        return ["id", "title", "link", "special"];
     }
 
 }

@@ -33,7 +33,8 @@ use App\Core\IAuthenticator;
             <div class="links" id="links">
                 <a href="?c=news" class="item">Novinky</a>
                 <a href="?c=reviews" class="item">Recenzie</a>
-                <a href="?c=offers" class="item">Špeciálne ponuky</a>
+                <a href="?c=hardware" class="item">Hardvér</a>
+                <a href="?c=offers" class="item">Ponuky</a>
             </div>
             <a href="javascript:void(0);" class="icon" onclick="hamburgerMenu()">
                 <i class="fa fa-bars"></i>

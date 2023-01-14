@@ -4,64 +4,61 @@ namespace App\Controllers;
 
 use App\Core\AControllerBase;
 use App\Core\Responses\Response;
-use App\Models\Review;
+use App\Models\Hardware;
 
-class ReviewsController extends AControllerBase
+class HardwareController extends AControllerBase
 {
-
     public function index(): Response
     {
-        $allReviews = Review::getAll();
-        return  $this->html($allReviews);
+        $allHW = Hardware::getAll();
+        return  $this->html($allHW);
     }
 
     public function article(): Response
     {
         $id = $this->request()->getValue("id");
-        $review = Review::getOne($id);
-        return $this->html($review);
+        $HW = Hardware::getOne($id);
+        return $this->html($HW);
     }
 
     public function newArticle(): Response
     {
         $id = $this->request()->getValue("id");
-        $review = ($id ? Review::getOne($id) : new Review());
-        $review->setTitle($this->request()->getValue('title'));
-        $review->setDescription($this->request()->getValue('description'));
-        $review->setParagraph1($this->request()->getValue('paragraph1'));
-        $review->setParagraph2($this->request()->getValue('paragraph2'));
-        $review->setParagraph3($this->request()->getValue('paragraph3'));
-        $review->setParagraph4($this->request()->getValue('paragraph4'));
-        $review->setImageSrc($this->request()->getValue('imageSrc'));
-        $review->setImageAlt($this->request()->getValue('imageAlt'));
+        $HW = ($id ? Hardware::getOne($id) : new Hardware());
+        $HW->setTitle($this->request()->getValue('title'));
+        $HW->setDescription($this->request()->getValue('description'));
+        $HW->setParagraph1($this->request()->getValue('paragraph1'));
+        $HW->setParagraph2($this->request()->getValue('paragraph2'));
+        $HW->setImageSrc($this->request()->getValue('imageSrc'));
+        $HW->setImageAlt($this->request()->getValue('imageAlt'));
 
         // form validation PHP
         if (!$this->validateForm()) {
             return $this->redirect("?c=home&a=error");
         }
 
-        $review->save();
-        return $this->redirect("?c=reviews"); /* redirect na uvod */
+        $HW->save();
+        return $this->redirect("?c=hardware"); /* redirect na uvod */
     }
 
     public function newArticleForm() {
-        return $this->html(new Review(),'newarticle');
+        return $this->html(new Hardware(),'newarticle');
     }
 
     public function editArticleForm() {
         $id = $this->request()->getValue("id");
-        $review = Review::getOne($id);
-        return $this->html($review,'newarticle');
+        $HW = Hardware::getOne($id);
+        return $this->html($HW,'newarticle');
 
     }
 
     public function deleteArticle(): Response {
         $id = $this->request()->getValue("id");
-        $review = Review::getOne($id);
-        if ($review != null) {
-            $review->delete();
+        $HW = Hardware::getOne($id);
+        if ($HW != null) {
+            $HW->delete();
         }
-        return $this->redirect("?c=reviews"); /* redirect na uvod */
+        return $this->redirect("?c=hardware"); /* redirect na uvod */
     }
 
     public function validateForm(): bool

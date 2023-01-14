@@ -14,4 +14,6 @@ class OffersController extends AControllerBase
         $allOffers = Offer::getAll();
         return  $this->html($allOffers);
     }
+
+    //TODO: createOffer, deleteOffer
 }

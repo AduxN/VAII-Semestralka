@@ -22,20 +22,12 @@ class HomeController extends AControllerBase
         return true;
     }
 
-    /**
-     * Example of an action (authorization needed)
-     * @return \App\Core\Responses\Response|\App\Core\Responses\ViewResponse
-     */
     public function index(): Response
     {
         return $this->html();
     }
 
-    /**
-     * Example of an action accessible without authorization
-     * @return \App\Core\Responses\ViewResponse
-     */
-    public function contact(): Response
+    public function error(): Response
     {
         return $this->html();
     }

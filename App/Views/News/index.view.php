@@ -24,7 +24,7 @@ use App\Models\News;
     <?php } ?>
 </div>
 <?php if ($auth->isLogged()) { ?>
-<div class="newreviewbtn">
+<div class="newpostbtn">
     <a href="?c=news&a=newPostForm">
         <button type="button" class="btn btn-primary">Nový príspevok</button>
     </a>
