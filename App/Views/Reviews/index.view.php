@@ -1,4 +1,9 @@
-<?php /* @var \App\Models\Review[] $data */
+<?php /* @var Review[] $data */
+/** @var IAuthenticator $auth */
+
+use App\Core\IAuthenticator;
+use App\Models\Review;
+
 ?>
 <h1>Recenzie</h1>
 
@@ -20,8 +25,10 @@
         </article>
     <?php } ?>
 </div>
-<div class="newreviewbtn">
-    <a href="?c=reviews&a=newArticleForm">
-        <button type="button" class="btn btn-primary">Nová recenzia</button>
-    </a>
-</div>
+<?php if ($auth->isLogged()) { ?>
+    <div class="newreviewbtn">
+        <a href="?c=reviews&a=newArticleForm">
+            <button type="button" class="btn btn-primary">Nová recenzia</button>
+        </a>
+    </div>
+<?php } ?>

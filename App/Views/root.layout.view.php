@@ -41,7 +41,7 @@ use App\Core\IAuthenticator;
         </div>
         <div class="btns" id="btns">
             <?php if ($auth->isLogged()) { ?>
-                <h3><?= $auth->getLoggedUserName() ?></h3>
+                <h3 class="username"><?= $auth->getLoggedUserName() ?></h3>
                 <a href="?c=auth&a=logout" class="btna"><button type="button" class="btn btn-primary logoutbtn">Odhlás sa</button></a>
             <?php } else { ?>
                 <a href="?c=auth&a=login" class="btna"><button type="button" class="btn btn-primary loginbtn">Prihlás sa</button></a>

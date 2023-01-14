@@ -5,6 +5,7 @@ namespace App\Controllers;
 use App\Config\Configuration;
 use App\Core\AControllerBase;
 use App\Core\Responses\Response;
+use App\Core\Responses\ViewResponse;
 use App\Models\Account;
 
 /**
@@ -25,7 +26,7 @@ class AuthController extends AControllerBase
 
     /**
      * Login a user
-     * @return \App\Core\Responses\RedirectResponse|\App\Core\Responses\ViewResponse
+     * @return \App\Core\Responses\RedirectResponse|\App\Core\Responses\Response
      */
     public function login(): Response
     {
@@ -53,7 +54,8 @@ class AuthController extends AControllerBase
     }
 
 
-    public function signInForm() {
+    public function signInForm()
+    {
         return $this->html(new Account(),'signIn');
     }
 

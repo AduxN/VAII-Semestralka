@@ -2,7 +2,7 @@
 
 namespace App\Config;
 
-use App\Auth\DummyAuthenticator;
+use App\Auth\AccountAuthenticator;
 
 /**
  * Class Configuration
@@ -14,9 +14,9 @@ class Configuration
     public const APP_NAME = 'GameCommunity';
     public const FW_VERSION = '1.0';
 
-    public const DB_HOST = 'localhost';  // change to db, if docker you use docker
+    public const DB_HOST = 'localhost';  // change to db if you use docker
     public const DB_NAME = 'gamecommunity_db';
-    public const DB_USER = 'root'; // change to vaiicko_user, if docker you use docker
+    public const DB_USER = 'root'; // change to vaiicko_user if you use docker
     public const DB_PASS = 'dtb456';
 
     public const LOGIN_URL = '?c=auth&a=login';
@@ -25,5 +25,5 @@ class Configuration
 
     public const DEBUG_QUERY = false;
 
-    public const AUTH_CLASS = DummyAuthenticator::class;
+    public const AUTH_CLASS = AccountAuthenticator::class;
 }

@@ -21,5 +21,5 @@ $layout = 'auth';
     </div>
 
     <!-- Submit button -->
-    <button type="submit" class="btn btn-primary btn-block mb-4" >Prihlás sa</button>
+    <button type="submit" name="submit" class="btn btn-primary btn-block mb-4" >Prihlás sa</button>
 </form>

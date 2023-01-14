@@ -1,11 +1,11 @@
 <?php
-
 $layout = 'auth';
 /** @var Array $data */
 ?>
-<form class="signInForm form rounded-lg" method="post" action="?c=auth&a=signIn">
 
+<form class="signInForm form rounded-lg" method="post" action="?c=auth&a=signIn">
     <h3>Registrácia</h3>
+
     <!-- Login input -->
     <div class="form-outline mb-4">
         <input type="text" id="formLogin" class="form-control" name="login" />
@@ -37,10 +37,13 @@ $layout = 'auth';
     </div>
 
     <!-- Submit button -->
-    <button type="submit" class="btn btn-primary btn-block mb-4">Registruj sa</button>
-    <?php //if ($data['error'] != "") { ?>
+    <button type="submit" name="submit" class="btn btn-primary btn-block mb-4">Registruj sa</button>
+
+    <!-- Error check -->
+    <?php
+    if ($data['error'] != "") { ?>
         <div>
-            <?php //= $data['error'] ?>
+            <?= $data['error'] ?>
         </div>
-    <?php // } ?>
+    <?php } ?>
 </form>

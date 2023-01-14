@@ -181,3 +181,11 @@
     box-shadow:  0 0 15px 0 rgba(8,129,163,0.5),
     0 0 10px 0 rgba(8,129,163,0.45);
 }
+
+.username {
+    margin-right: 12px;
+    margin-bottom: 0;
+    font-size: large;
+    display: flex;
+    align-items: center;
+}
