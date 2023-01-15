@@ -66,7 +66,6 @@ body {
 
     .offer, .specialoffer {
         font-size: 20px;
-        padding: 10px 30px;
     }
 
     .offersText {
@@ -75,6 +74,11 @@ body {
 
     .backarrow {
         font-size: 32px;
+    }
+
+    .offerbtn {
+        width: fit-content;
+        margin: auto;
     }
 }
 
@@ -117,7 +121,6 @@ body {
 
     .offer, .specialoffer {
         font-size: 24px;
-        padding: 10px 45px;
     }
 
     .offersText {
@@ -126,6 +129,10 @@ body {
 
     .backarrow {
         font-size: 36px;
+    }
+
+    .offerbtn {
+        float: right;
     }
 }
 
@@ -172,7 +179,6 @@ body {
 
     .offer, .specialoffer {
         font-size: 24px;
-        padding: 10px 100px;
     }
 
     .offersText {
@@ -181,6 +187,10 @@ body {
 
     .backarrow {
         font-size: 40px;
+    }
+
+    .offerbtn {
+        float: right;
     }
 }
 
@@ -268,20 +278,22 @@ hr {
     background-color: #1e1e1e;
     border-radius: 10px;
     margin: 0 32px 5px;
+    padding: 10px;
 }
 
 .specialoffer {
     background-color: #011536;
     border-radius: 10px;
     margin: 0 32px 5px;
+    padding: 10px;
 }
 
 .offers a , .specialoffers a {
     text-decoration: none;
 }
 
-.offers a:hover , .specialoffers a:hover {
-    color: #2E86C1;
+.offerlink:hover {
+    color: white;
 }
 
 .offersText {
@@ -416,6 +428,10 @@ input[type=checkbox] {
     margin-left: 3%;
 }
 
+.backarrow:hover {
+    color: #0d6efd;
+}
+
 .openedTitle {
     display: inline-flex;
     justify-content: center;
@@ -427,4 +443,32 @@ input[type=checkbox] {
 
 .articleTitle {
     justify-items: center;
+}
+
+.offerbtn {
+    /*float: right;*/
+    display: flex;
+    justify-content: center;
+    border-radius: 16px;
+    width: 30px;
+    height: 30px;
+    align-items: center;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.offerbtn:hover {
+    background-color: #d9534f;
+    border-color: #d9534f;
+    color: white;
+}
+
+.specialofferbtn {
+    background-color: #011536;
+    border-color: #011536;
+}
+
+.normalofferbtn {
+    background-color: #1e1e1e;
+    border-color: #1e1e1e;
 }

@@ -13,7 +13,12 @@ use App\Models\Offer;
         <ul class="specialoffers">
             <?php foreach ($data as $o) { ?>
                 <?php if ($o->isSpecial()) { ?>
-                    <li class="specialoffer"><a href="<?=$o->getLink()?>" target="_blank"><?=$o->getTitle()?></a></li>
+                    <li class="specialoffer">
+                        <a href="<?=$o->getLink()?>" target="_blank" class="offerlink"><?=$o->getTitle()?></a>
+                        <?php if ($auth->getLoggedUserId() == 10) { ?>
+                            <a href="?c=offers&a=deleteOffer&id=<?=$o->getId()?>" onclick="return confirm('Ponuka bude zmazaná')" class="btn btn-danger specialofferbtn offerbtn">X</a>
+                        <?php } ?>
+                    </li>
                 <?php } ?>
             <?php } ?>
         </ul>
@@ -27,7 +32,12 @@ use App\Models\Offer;
     <ul class="offers">
         <?php foreach ($data as $o) { ?>
             <?php if (!$o->isSpecial()) { ?>
-                <li class="offer"><a href="<?=$o->getLink()?>" target="_blank"><?=$o->getTitle()?></a></li>
+                <li class="offer">
+                    <a href="<?=$o->getLink()?>" target="_blank" class="offerlink"><?=$o->getTitle()?></a>
+                    <?php if ($auth->getLoggedUserId() == 10) { ?>
+                        <a href="?c=offers&a=deleteOffer&id=<?=$o->getId()?>" onclick="return confirm('Ponuka bude zmazaná')" class="btn btn-danger normalofferbtn offerbtn">X</a>
+                    <?php } ?>
+                </li>
             <?php } ?>
         <?php } ?>
     </ul>

@@ -39,7 +39,7 @@ class OffersController extends AControllerBase
         return $this->html(new Offer(),'newoffer');
     }
 
-    public function deletePost(): Response {
+    public function deleteOffer(): Response {
         $id = $this->request()->getValue("id");
         $offer = Offer::getOne($id);
         if ($offer != null) {
