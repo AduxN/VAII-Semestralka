@@ -9,7 +9,12 @@ $review = $data;
 
 <div class="openArticles">
     <article class="openArticle">
-        <h2><?=$review->getTitle()?></h2>
+        <div class="articleTitle">
+            <input class="fa fa-backward backarrow" type="button" value="&#xf104;" onclick="history.back()">
+            <h2 class="openedTitle"><?=$review->getTitle()?></h2>
+        </div>
+
+
         <p class="review_text"><?=$review->getParagraph1()?></p>
         <p class="review_text"><?=$review->getParagraph2()?></p>
         <p class="review_text"><?=$review->getParagraph3()?></p>

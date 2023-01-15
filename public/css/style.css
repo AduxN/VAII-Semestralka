@@ -27,6 +27,16 @@ body {
         grid-template-columns: repeat(1, 1fr);
     }
 
+    .openArticle {
+        margin-left: 8px;
+        margin-right: 8px;
+    }
+
+    .openedTitle {
+        padding-right: 2.5rem;
+    }
+
+
     article {
         margin-left: 0;
         margin-right: 0;
@@ -62,6 +72,10 @@ body {
     .offersText {
         font-size: 16px;
     }
+
+    .backarrow {
+        font-size: 32px;
+    }
 }
 
 /*tablet*/
@@ -69,6 +83,15 @@ body {
 
     .closedArticles {
         grid-template-columns: repeat(2, 1fr);
+    }
+
+    .openArticle {
+        margin-left: 32px;
+        margin-right: 32px;
+    }
+
+    .openedTitle {
+        padding-right: 3rem;
     }
 
     h1 {
@@ -100,6 +123,10 @@ body {
     .offersText {
         font-size: 20px;
     }
+
+    .backarrow {
+        font-size: 36px;
+    }
 }
 
 /*desktop*/
@@ -107,6 +134,15 @@ body {
 
     .closedArticles {
         grid-template-columns: repeat(3, 1fr);
+    }
+
+    .openArticle {
+        margin-left: 48px;
+        margin-right: 48px;
+    }
+
+    .openedTitle {
+        padding-right: 4.5rem;
     }
 
     h1 {
@@ -142,6 +178,10 @@ body {
     .offersText {
         font-size: 20px;
     }
+
+    .backarrow {
+        font-size: 40px;
+    }
 }
 
 
@@ -154,6 +194,7 @@ body {
 h1 {
     color: #1e1e1e;
 }
+
 
 h3 {
     margin-bottom: 28px;
@@ -361,4 +402,29 @@ ul {
 
 input[type=checkbox] {
     transform: scale(1.5);
+}
+
+.backarrow {
+    background-color: #515A5A;
+    border-style: none;
+    color: #1e1e1e;
+    width: 30px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    float: left;
+    margin-left: 3%;
+}
+
+.openedTitle {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0;
+    justify-self: center;
+
+}
+
+.articleTitle {
+    justify-items: center;
 }

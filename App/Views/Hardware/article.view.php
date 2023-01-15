@@ -10,9 +10,11 @@ $hw = $data;
 
 <div class="openArticles">
     <article class="openArticle">
-        <h2><?=$hw->getTitle()?></h2>
+        <div class="articleTitle">
+            <input class="fa fa-backward backarrow" type="button" value="&#xf104;" onclick="history.back()">
+            <h2 class="openedTitle"><?=$hw->getTitle()?></h2>
+        </div>
         <p class="hw_text"><?=$hw->getParagraph1()?></p>
-
         <img src="<?=$hw->getImageSrc()?>" alt="<?=$hw->getImageAlt()?>" class="hw_img">
         <p class="hw_text"><?=$hw->getParagraph2()?></p>
         <?php if ($auth->isLogged() && $auth->getLoggedUserId() == 10) { ?>
