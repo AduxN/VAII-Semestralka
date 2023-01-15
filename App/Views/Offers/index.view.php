@@ -34,7 +34,7 @@ use App\Models\Offer;
             <?php if (!$o->isSpecial()) { ?>
                 <li class="offer">
                     <a href="<?=$o->getLink()?>" target="_blank" class="offerlink"><?=$o->getTitle()?></a>
-                    <?php if ($auth->getLoggedUserId() == 10) { ?>
+                    <?php if ($auth->isLogged() && $auth->getLoggedUserId() == 10) { ?>
                         <a href="?c=offers&a=deleteOffer&id=<?=$o->getId()?>" onclick="return confirm('Ponuka bude zmazaná')" class="btn btn-danger normalofferbtn offerbtn">X</a>
                     <?php } ?>
                 </li>
