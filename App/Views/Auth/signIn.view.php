@@ -5,6 +5,7 @@ use App\Models\Account;
 $layout = 'auth';
 /** @var Account[] $data */
 ?>
+<input class="fa fa-backward backarrow" type="button" value="&#xf104;" onclick="history.back()">
 
 <form class="signInForm form rounded-lg" method="post" action="?c=auth&a=signIn">
     <h3>Registrácia</h3>

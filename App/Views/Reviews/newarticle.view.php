@@ -3,6 +3,7 @@ use App\Models\Review;
 /** @var Review $data */
 $post = $data;
 ?>
+<input class="fa fa-backward backarrow" type="button" value="&#xf104;" onclick="history.back()">
 
 <form class="newarticleForm form rounded-lg" name="newarticleform" method="post" action="?c=reviews&a=newArticle" onsubmit="return validateArticle()">
     <?php if ($post->getId()) { ?>

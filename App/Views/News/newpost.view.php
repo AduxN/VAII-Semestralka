@@ -3,6 +3,7 @@ use App\Models\News;
 /** @var News $data */
 $post = $data;
 ?>
+<input class="fa fa-backward backarrow" type="button" value="&#xf104;" onclick="history.back()">
 
 <form class="newarticleForm form rounded-lg" name="newpostform" method="post" action="?c=news&a=newPost" onsubmit="return validatePost()">
     <?php if ($post->getId()) { ?>
@@ -23,7 +24,7 @@ $post = $data;
 
     <!-- Summary input -->
     <div class="form-outline mb-4">
-        <textarea class="form-control" id="formSummary" rows="2" name="summary"><?=$post->getSummary()?></textarea>
+        <textarea class="form-control" id="formSummary" rows="2" name="summ"><?=$post->getSummary()?></textarea>
         <label class="form-label" for="formSummary">Zhrnutie</label>
     </div>
 

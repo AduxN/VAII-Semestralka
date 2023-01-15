@@ -2,6 +2,8 @@
 $layout = 'auth';
 /** @var Array $data */
 ?>
+<input class="fa fa-backward backarrow" type="button" value="&#xf104;" onclick="history.back()">
+
 <form class="loginForm form rounded-lg" method="post" action="<?= \App\Config\Configuration::LOGIN_URL ?>">
     <div class="text-center text-danger mb-3">
         <?= @$data['message'] ?>

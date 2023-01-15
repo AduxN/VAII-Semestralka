@@ -4,6 +4,7 @@ use App\Models\Hardware;
 /** @var Hardware $data */
 $post = $data;
 ?>
+<input class="fa fa-backward backarrow" type="button" value="&#xf104;" onclick="history.back()">
 
 <form class="newarticleForm form rounded-lg" name="newarticleform" method="post" action="?c=hardware&a=newArticle" onsubmit="return validateHW()">
     <?php if ($post->getId()) { ?>
