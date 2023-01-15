@@ -27,6 +27,11 @@ body {
         grid-template-columns: repeat(1, 1fr);
     }
 
+    .newsArticle {
+        margin-left: 3%;
+        margin-right: 3%;
+    }
+
     .openArticle {
         margin-left: 8px;
         margin-right: 8px;
@@ -89,6 +94,11 @@ body {
         grid-template-columns: repeat(2, 1fr);
     }
 
+    .newsArticle {
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+
     .openArticle {
         margin-left: 32px;
         margin-right: 32px;
@@ -141,6 +151,11 @@ body {
 
     .closedArticles {
         grid-template-columns: repeat(3, 1fr);
+    }
+
+    .newsArticle {
+        margin-left: 15%;
+        margin-right: 15%;
     }
 
     .openArticle {
@@ -308,11 +323,20 @@ hr {
     gap: 5px;
 }
 
-.closedArticle, .newsArticle {
+.closedArticle {
     border-radius: 15px;
     background-color: #1e1e1e;
     margin: 3%;
     padding: 4%;
+    box-shadow:  0 6px 15px 0 rgba(13, 110, 253, 0.5),
+    0 6px 30px 0 rgba(13, 110, 253, 0.45);
+}
+.newsArticle {
+    border-radius: 15px;
+    background-color: #1e1e1e;
+    padding: 4%;
+    margin-bottom: 3%;
+    margin-top: 3%;
     box-shadow:  0 6px 15px 0 rgba(13, 110, 253, 0.5),
     0 6px 30px 0 rgba(13, 110, 253, 0.45);
 }

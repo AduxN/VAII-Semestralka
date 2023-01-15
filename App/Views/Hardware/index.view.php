@@ -12,7 +12,7 @@ use App\Models\Hardware;
     </div>
 
     <div class="closedArticles" id="closedHW">
-        <?php foreach ($data as $hw) { ?>
+        <?php foreach (array_reverse($data) as $hw) { ?>
             <article class="closedArticle">
                 <div class="hw_title_div">
                     <a class="hw_title" href="?c=hardware&a=article&id=<?=$hw->getId()?>">

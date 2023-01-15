@@ -168,8 +168,6 @@ function resizeRefresh() {
 async function getArticles(searchTerm, reviews) {
     // Send a request to the PHP script to get the articles from the database
     let response;
-    console.log(searchTerm);
-
     if (reviews) {
         response = await fetch("?c=reviews&a=reviews");
     } else {
@@ -227,11 +225,4 @@ function displayArticles(articles, reviews) {
         }
     }
 
-// function offerCheckbox() {
-//     let checkBox = document.getElementById("formSpecial");
-//
-//     if (checkBox.checked){
-//
-//     }
-// }
 }

@@ -47,6 +47,6 @@ $post = $data;
     </div>
 
     <!-- Submit button -->
-    <button type="submit" class="btn btn-primary btn-block mb-4">Ulož recenziu</button>
+    <button type="submit" class="btn btn-primary btn-block mb-4">Ulož článok</button>
 </form>
 

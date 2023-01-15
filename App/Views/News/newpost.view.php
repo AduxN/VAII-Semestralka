@@ -4,8 +4,7 @@ use App\Models\News;
 $post = $data;
 ?>
 
-<form class="newarticleForm form rounded-lg" name="newpostform" method="post" action="?c=news&a=newPost"
-      onsubmit="return validatePost()" xmlns="http://www.w3.org/1999/html">
+<form class="newarticleForm form rounded-lg" name="newpostform" method="post" action="?c=news&a=newPost" onsubmit="return validatePost()">
     <?php if ($post->getId()) { ?>
         <input type="hidden" name="id" value="<?=$post->getId() ?>">
     <?php } ?>

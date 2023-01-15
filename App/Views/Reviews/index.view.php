@@ -12,7 +12,7 @@ use App\Models\Review;
 </div>
 
 <div class="closedArticles" id="closedReviews">
-    <?php foreach ($data as $rev) { ?>
+    <?php foreach (array_reverse($data) as $rev) { ?>
         <article class="closedArticle">
             <div class="review_title_div">
                 <a class="review_title" href="?c=reviews&a=article&id=<?=$rev->getId()?>">

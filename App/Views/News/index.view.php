@@ -9,10 +9,11 @@ use App\Models\News;
 <h2 class="newsTitle">Najaktuálnejšie informácie z herného sveta</h2>
 <div class="newsArticles">
     <?php foreach (array_reverse($data) as $n) { ?>
-        <article class="closedArticle">
+        <article class="newsArticle">
             <h2><?=$n->getTitle()?></h2>
             <p class="news_p"><?=$n->getDescription()?></p>
             <div class="content"><?=$n->getContent()?></div>
+            <br>
             <p class="news_p"><?=$n->getSummary()?></p>
             <?php if ($auth->isLogged() && $auth->getLoggedUserId() == 10) { ?>
                 <div class="articlebtns">
