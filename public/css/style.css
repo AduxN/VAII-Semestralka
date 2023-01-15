@@ -318,7 +318,7 @@ hr {
     text-decoration: none;
     margin: 0 12px;
 }
-.newreviewbtn, .newpostbtn, .newhwbtn {
+.newreviewbtn, .newpostbtn, .newhwbtn , .newofferbtn {
     display: flex;
     justify-content: flex-end;
     margin: 0 10%;
@@ -357,4 +357,8 @@ ul {
 .searchInput {
     padding: 0 20%;
     margin-bottom: 16px;
+}
+
+input[type=checkbox] {
+    transform: scale(1.5);
 }

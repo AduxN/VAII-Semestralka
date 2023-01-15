@@ -32,3 +32,10 @@ use App\Models\Offer;
         <?php } ?>
     </ul>
 </div>
+<?php if ($auth->isLogged() && $auth->getLoggedUserId() == 10) { ?>
+    <div class="newofferbtn">
+        <a href="?c=offers&a=newOfferForm">
+            <button type="button" class="btn btn-primary">Nová ponuka</button>
+        </a>
+    </div>
+<?php } ?>

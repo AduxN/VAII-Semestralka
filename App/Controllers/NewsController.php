@@ -26,7 +26,7 @@ class NewsController extends AControllerBase
 
         // form validation PHP
         if (!$this->validateForm()) {
-            return $this->redirect("?c=news&a=error");
+            return $this->redirect("?c=home&a=error");
         }
 
         $post->save();

@@ -115,6 +115,29 @@ function validateHW() {
     return true;
 }
 
+function validateOffer() {
+    let title = document.forms['newarticleform']['title'].value;
+    let link = document.forms['newarticleform']['link'].value;
+
+    if (title === "") {
+        alert("Názov musí byť zadaný");
+        return false;
+    }
+    if (title.length > 255) {
+        alert("Názov je príliš dlhý");
+        return false;
+    }
+    if (link === "") {
+        alert("Link musí byť zadaný");
+        return false;
+    }
+    if (link.length > 255) {
+        alert("Link je príliš dlhý");
+        return false;
+    }
+    return true;
+}
+
 function hamburgerMenu() {
     let links = document.getElementById("links");
     let btns = document.getElementById("btns");
@@ -204,4 +227,11 @@ function displayArticles(articles, reviews) {
         }
     }
 
+// function offerCheckbox() {
+//     let checkBox = document.getElementById("formSpecial");
+//
+//     if (checkBox.checked){
+//
+//     }
+// }
 }

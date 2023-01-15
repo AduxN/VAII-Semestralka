@@ -8,7 +8,7 @@ class Offer extends Model
     protected $id;
     protected $title;
     protected $link;
-    protected $special;
+    protected int $special;
 
     /**
      * @return mixed
@@ -59,17 +59,17 @@ class Offer extends Model
     }
 
     /**
-     * @return mixed
+     * @return int
      */
-    public function isSpecial()
+    public function isSpecial(): int
     {
         return $this->special;
     }
 
     /**
-     * @param mixed $special
+     * @param int $special
      */
-    public function setSpecial($special): void
+    public function setSpecial(int $special): void
     {
         $this->special = $special;
     }
