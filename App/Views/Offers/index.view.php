@@ -6,7 +6,25 @@ use App\Models\Offer;
 
 ?>
 <h1>Špeciálne ponuky</h1>
-<h2 class="offersTitle">Aktuálne ponuky a zľavy na vaše obľúbené hry, na jednom mieste</h2>
+
+<div class="offersTitle">
+    <div class="col-3 newofferbtn">
+        <?php if ($auth->isLogged() && $auth->getLoggedUserId() == 10) { ?>
+            <a href="?c=offers&a=newOfferForm" class="text-decoration-none">
+                <button type="button" class="btn btn-dark">Nová ponuka</button>
+            </a>
+        <?php } ?>
+    </div>
+
+    <div class="col-6">
+        <h2>Aktuálne ponuky a zľavy na vaše obľúbené hry, na jednom mieste</h2>
+    </div>
+
+    <div class="col-3">
+    </div>
+</div>
+
+
 <?php if ($auth->isLogged()) { ?>
     <div>
         <h3 class="offersText">Špeciálne ponuky len pre prihlásených používateľov</h3>
@@ -42,10 +60,3 @@ use App\Models\Offer;
         <?php } ?>
     </ul>
 </div>
-<?php if ($auth->isLogged() && $auth->getLoggedUserId() == 10) { ?>
-    <div class="newofferbtn">
-        <a href="?c=offers&a=newOfferForm">
-            <button type="button" class="btn btn-primary">Nová ponuka</button>
-        </a>
-    </div>
-<?php } ?>

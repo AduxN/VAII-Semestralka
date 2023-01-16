@@ -4,7 +4,7 @@ use App\Models\Hardware;
 /** @var Hardware $data */
 $post = $data;
 ?>
-<input class="fa fa-backward backarrow" type="button" value="&#xf104;" onclick="history.back()">
+<input class="fa fa-backward formarrow" type="button" value="&#xf104;" onclick="history.back()">
 
 <form class="newarticleForm form rounded-lg" name="newarticleform" method="post" action="?c=hardware&a=newArticle" onsubmit="return validateHW()">
     <?php if ($post->getId()) { ?>
@@ -48,6 +48,6 @@ $post = $data;
     </div>
 
     <!-- Submit button -->
-    <button type="submit" class="btn btn-primary btn-block mb-4">Ulož článok</button>
+    <button type="submit" class="submitbtn btn btn-primary btn-block mb-4">Ulož článok</button>
 </form>
 

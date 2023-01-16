@@ -3,10 +3,27 @@
 
 use App\Core\IAuthenticator;
 use App\Models\News;
-
 ?>
+
 <h1>Novinky</h1>
-<h2 class="newsTitle">Najaktuálnejšie informácie z herného sveta</h2>
+
+<div class="newsTitle">
+    <div class="col-3 newpostbtn">
+        <?php if ($auth->isLogged() && $auth->getLoggedUserId() == 10) { ?>
+            <a href="?c=news&a=newPostForm" class="text-decoration-none">
+                <button type="button" class="btn btn-dark">Nový príspevok</button>
+            </a>
+        <?php } ?>
+    </div>
+
+    <div class="col-6">
+        <h2>Najaktuálnejšie informácie z herného sveta</h2>
+    </div>
+
+    <div class="col-3">
+    </div>
+</div>
+
 <div class="newsArticles">
     <?php foreach (array_reverse($data) as $n) { ?>
         <article class="newsArticle">
@@ -24,10 +41,3 @@ use App\Models\News;
         </article>
     <?php } ?>
 </div>
-<?php if ($auth->isLogged() && $auth->getLoggedUserId() == 10) { ?>
-    <div class="newpostbtn">
-        <a href="?c=news&a=newPostForm">
-            <button type="button" class="btn btn-primary">Nový príspevok</button>
-        </a>
-    </div>
-<?php } ?>

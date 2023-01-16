@@ -165,7 +165,7 @@ function resizeRefresh() {
     }
 }
 
-async function getArticles(searchTerm, reviews) {
+async function filterArticles(searchTerm, reviews) {
     // Send a request to the PHP script to get the articles from the database
     let response;
     if (reviews) {
@@ -181,6 +181,39 @@ async function getArticles(searchTerm, reviews) {
 
     // Display the filtered articles
     displayArticles(filteredArticles, reviews);
+}
+
+async function sortArticles(asc, reviews) {
+    // Send a request to the PHP script to get the articles from the database
+    let response;
+    if (reviews) {
+        response = await fetch("?c=reviews&a=reviews");
+    } else {
+        response = await fetch("?c=hardware&a=hardware");
+    }
+
+    const articles = await response.json();
+
+    // Sort the articles
+    const sortedArticles = asc
+        ? [...articles].sort((a, b) => a.title.localeCompare(b.title))
+        : [...articles].sort((a, b) => b.title.localeCompare(a.title));
+
+    // Display the filtered articles
+    displayArticles(sortedArticles, reviews);
+}
+
+async function getArticles(reviews) {
+    let response;
+    if (reviews) {
+        response = await fetch("?c=reviews&a=reviews");
+    } else {
+        response = await fetch("?c=hardware&a=hardware");
+    }
+
+    const articles = await response.json();
+    // const reversed = [...articles].reverse();
+    displayArticles(articles.reverse(), reviews);
 }
 
 function displayArticles(articles, reviews) {

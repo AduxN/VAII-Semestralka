@@ -3,7 +3,7 @@ use App\Models\News;
 /** @var News $data */
 $post = $data;
 ?>
-<input class="fa fa-backward backarrow" type="button" value="&#xf104;" onclick="history.back()">
+<input class="fa fa-backward formarrow" type="button" value="&#xf104;" onclick="history.back()">
 
 <form class="newarticleForm form rounded-lg" name="newpostform" method="post" action="?c=news&a=newPost" onsubmit="return validatePost()">
     <?php if ($post->getId()) { ?>
@@ -35,6 +35,6 @@ $post = $data;
     </div>
 
     <!-- Submit button -->
-    <button type="submit" class="btn btn-primary btn-block mb-4">Ulož príspevok</button>
+    <button type="submit" class="submitbtn btn btn-primary btn-block mb-4">Ulož príspevok</button>
 </form>
 

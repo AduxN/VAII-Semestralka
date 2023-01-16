@@ -3,7 +3,7 @@ use App\Models\Review;
 /** @var Review $data */
 $post = $data;
 ?>
-<input class="fa fa-backward backarrow" type="button" value="&#xf104;" onclick="history.back()">
+<input class="fa fa-backward formarrow" type="button" value="&#xf104;" onclick="history.back()">
 
 <form class="newarticleForm form rounded-lg" name="newarticleform" method="post" action="?c=reviews&a=newArticle" onsubmit="return validateArticle()">
     <?php if ($post->getId()) { ?>
@@ -59,6 +59,6 @@ $post = $data;
     </div>
 
     <!-- Submit button -->
-    <button type="submit" class="btn btn-primary btn-block mb-4">Ulož recenziu</button>
+    <button type="submit" class="submitbtn btn btn-primary btn-block mb-4">Ulož recenziu</button>
 </form>
 

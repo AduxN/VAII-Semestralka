@@ -3,9 +3,10 @@ use App\Models\Offer;
 /** @var Offer $data */
 $offer = $data;
 ?>
+<input class="fa fa-backward formarrow" type="button" value="&#xf104;" onclick="history.back()">
 
 <form class="newarticleForm form rounded-lg" name="newofferform" method="post" action="?c=offers&a=newOffer" onsubmit="return validateOffer()">
-    <h3>Príspevok</h3>
+    <h3>Ponuka</h3>
     <!-- Title input -->
     <div class="form-outline mb-4">
         <input type="text" id="formTitle" class="form-control" name="title"/>
@@ -27,5 +28,5 @@ $offer = $data;
 
 
     <!-- Submit button -->
-    <button type="submit" class="btn btn-primary btn-block mb-4">Ulož ponuku</button>
+    <button type="submit" class="submitbtn btn btn-primary btn-block mb-4">Ulož ponuku</button>
 </form>
