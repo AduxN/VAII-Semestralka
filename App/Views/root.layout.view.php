@@ -33,6 +33,7 @@ use App\Core\IAuthenticator;
             <div class="links" id="links">
                 <a href="?c=news" class="item">Novinky</a>
                 <a href="?c=reviews" class="item">Recenzie</a>
+                <a href="?c=esports" class="item">eSports</a>
                 <a href="?c=hardware" class="item">Hardvér</a>
                 <a href="?c=offers" class="item">Ponuky</a>
             </div>

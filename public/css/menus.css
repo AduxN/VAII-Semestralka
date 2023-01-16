@@ -44,7 +44,7 @@
     .links {
         display: none;
         flex-direction: column;
-        row-gap: 10px;
+        row-gap: 5px;
         margin-top: 48px;
     }
 
@@ -74,7 +74,7 @@
     }
 
     .defaultmenu {
-        gap: 40px;
+        gap: 35px;
     }
 
     .btns {
@@ -89,7 +89,7 @@
         display: flex;
         justify-content: space-evenly;
         text-align: center;
-        gap: 40px;
+        gap: 35px;
     }
 }
 
@@ -101,7 +101,7 @@
         justify-content: space-between;
         align-items: center;
         flex-direction: row;
-        padding: 10px 3%;
+        padding: 10px 2%;
     }
 
     .menu a {
@@ -113,7 +113,7 @@
     }
 
     .defaultmenu {
-        gap: 60px;
+        gap: 40px;
     }
 
     /* prihlasenie a registracia */
@@ -129,7 +129,7 @@
         display: flex;
         justify-content: space-evenly;
         text-align: center;
-        gap: 60px;
+        gap: 40px;
     }
 }
 

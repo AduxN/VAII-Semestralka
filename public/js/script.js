@@ -11,16 +11,15 @@ function validateArticle() {
     if (title === "") {
         alert("Názov musí byť zadaný");
         return false;
-    }
-    if (title.length > 255) {
+    } else if (title.length > 255) {
         alert("Názov je príliš dlhý");
         return false;
     }
+
     if (desc === "") {
         alert("Popis musí byť zadaný");
         return false;
-    }
-    if (desc.length > 1000) {
+    } else if (desc.length > 1000) {
         alert("Popis je príliš dlhý");
         return false;
     }
@@ -48,37 +47,59 @@ function validatePost() {
     if (title === "") {
         alert("Názov musí byť zadaný");
         return false;
-    }
-    if (title.length > 255) {
+    } else if (title.length > 255) {
         alert("Názov je príliš dlhý");
         return false;
     }
     if (desc === "") {
         alert("Popis musí byť zadaný");
         return false;
-    }
-    if (desc.length > 1000) {
+    } else if (desc.length > 1000) {
         alert("Popis je príliš dlhý");
         return false;
     }
     if (summ === "") {
         alert("Zhrnutie musí byť zadané");
         return false;
-    }
-    if (summ.length > 1000) {
+    } else if (summ.length > 1000) {
         alert("Zhrnutie je príliš dlhé");
         return false;
     }
     if (cont === "") {
         alert("Link na obsah musí byť zadaný");
         return false;
-    }
-    if (cont.length > 1000) {
+    } else if (cont.length > 1000) {
         alert("Link na obsah je príliš dlhý");
         return false;
     }
     return true;
 }
+
+function validateEsport() {
+    let title = document.forms['newesportform']['title'].value;
+    let imageSrc = document.forms['newesportform']['imageSrc'].value;
+    let imageAlt = document.forms['newesportform']['imageAlt'].value;
+    let text = document.forms['newesportform']['text'].value;
+
+    if (title === "") {
+        alert("Názov musí byť zadaný");
+        return false;
+    } else if (title.length > 255) {
+        alert("Názov je príliš dlhý");
+        return false;
+    }
+    if (imageSrc.length > 2000 || imageAlt.length > 30) {
+        alert("Minimálne jeden z údajov o obrázku je príliš dlhý");
+        return false;
+    }
+    if (text.length > 5000) {
+        alert("Text je príliš dlhý");
+        return false;
+    }
+    return true;
+}
+
+
 
 function validateHW() {
     let title = document.forms['newarticleform']['title'].value;
