@@ -14,19 +14,19 @@ $layout = 'auth';
         <!-- Login input -->
         <div class="form-outline mb-4">
             <input type="text" id="formLogin" class="form-control" name="login" />
-            <label class="form-label" for="formLogin">Prihlasovacie meno</label>
+            <label class="form-label" for="formLogin">Prihlasovacie meno *</label>
         </div>
 
         <!-- Password input -->
         <div class="form-outline mb-4">
             <input type="password" id="formPassword" class="form-control" name="password" />
-            <label class="form-label" for="formPassword">Heslo</label>
+            <label class="form-label" for="formPassword">Heslo *</label>
         </div>
 
         <!-- Password check input -->
         <div class="form-outline mb-4">
-            <input type="password" id="formPassCheck" class="form-control" name="password" />
-            <label class="form-label" for="formPassCheck">Kontrola hesla</label>
+            <input type="password" id="formPassCheck" class="form-control" name="password2" />
+            <label class="form-label" for="formPassCheck">Kontrola hesla *</label>
         </div>
 
         <!-- Name input -->
@@ -38,31 +38,16 @@ $layout = 'auth';
         <!-- Email input -->
         <div class="form-outline mb-4">
             <input type="email" id="formEmail" class="form-control" name="email" />
-            <label class="form-label" for="formEmail">Email</label>
+            <label class="form-label" for="formEmail">Email *</label>
         </div>
 
         <!-- Submit button -->
         <button type="submit" name="submit" class="submitbtn btn btn-primary btn-block mb-4">Registruj sa</button>
 
         <!-- Error check -->
-        <?php
-        //if ($data['error'] != "") { ?>
-            <div>
-                <?php //=$data['error'] ?>
-            </div>
-        <?php //} ?>
-
-        <?php //if (isset($data->error)) { ?>
-            <?php //if ($data['error'] != "") { ?>
-                <div>
-                    <?php //= $data['error'] ?>
-                </div>
-            <?php //} ?>
-        <?php //} ?>
-
-        <div>
+        <div class="text-center text-danger mb-3">
             <?php foreach ($data as $err) { ?>
-                <?=$err?>
+                <?= $err?>
             <?php } ?>
         </div>
     </form>

@@ -15,7 +15,6 @@ function validateArticle() {
         alert("Názov je príliš dlhý");
         return false;
     }
-
     if (desc === "") {
         alert("Popis musí byť zadaný");
         return false;
@@ -99,8 +98,6 @@ function validateEsport() {
     return true;
 }
 
-
-
 function validateHW() {
     let title = document.forms['newarticleform']['title'].value;
     let desc = document.forms['newarticleform']['description'].value;
@@ -112,16 +109,14 @@ function validateHW() {
     if (title === "") {
         alert("Názov musí byť zadaný");
         return false;
-    }
-    if (title.length > 255) {
+    } else if (title.length > 255) {
         alert("Názov je príliš dlhý");
         return false;
     }
     if (desc === "") {
         alert("Popis musí byť zadaný");
         return false;
-    }
-    if (desc.length > 1000) {
+    } else if (desc.length > 1000) {
         alert("Popis je príliš dlhý");
         return false;
     }
@@ -143,16 +138,14 @@ function validateOffer() {
     if (title === "") {
         alert("Názov musí byť zadaný");
         return false;
-    }
-    if (title.length > 255) {
+    } else if (title.length > 255) {
         alert("Názov je príliš dlhý");
         return false;
     }
     if (link === "") {
         alert("Link musí byť zadaný");
         return false;
-    }
-    if (link.length > 255) {
+    } else if (link.length > 255) {
         alert("Link je príliš dlhý");
         return false;
     }
@@ -200,6 +193,10 @@ async function filterArticles(searchTerm, reviews) {
     // Filter the articles based on the search term
     const filteredArticles = articles.filter(article => article.title.toLowerCase().includes(searchTerm.toLowerCase()));
 
+    // Reverse the articles back to original position (from newest to oldest)
+    if (searchTerm === "") {
+        filteredArticles.reverse();
+    }
     // Display the filtered articles
     displayArticles(filteredArticles, reviews);
 }
@@ -233,7 +230,7 @@ async function getArticles(reviews) {
     }
 
     const articles = await response.json();
-    // const reversed = [...articles].reverse();
+    // Reverse the articles back to original position (from newest to oldest)
     displayArticles(articles.reverse(), reviews);
 }
 
@@ -244,7 +241,7 @@ function displayArticles(articles, reviews) {
 
         // Add the filtered articles to the page
         for (const article of articles) {
-            //<div class="closedArticles" id="closedReviews">
+
             const articleElement = document.createElement('article');
             articleElement.classList.add("closedArticle");
             articleElement.innerHTML =
@@ -255,7 +252,7 @@ function displayArticles(articles, reviews) {
                     </div>
 
                     <img src="${article.imageSrc}" alt="${article.imageAlt}" class="review_img">
-                        <p class="review_text">${article.description}</p>`
+                        <p class="review_text">${article.description}</p>`;
             document.getElementById('closedReviews').appendChild(articleElement);
         }
     } else {
@@ -274,7 +271,7 @@ function displayArticles(articles, reviews) {
                     </div>
 
                     <img src="${article.imageSrc}" alt="${article.imageAlt}" class="hw_img">
-                        <p class="hw_text">${article.description}</p>`
+                        <p class="hw_text">${article.description}</p>`;
             document.getElementById('closedHW').appendChild(articleElement);
         }
     }

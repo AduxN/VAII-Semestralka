@@ -13,19 +13,19 @@ $post = $data;
     <!-- Title input -->
     <div class="form-outline mb-4">
         <input type="text" id="formTitle" class="form-control" name="title" value="<?=$post->getTitle()?>"/>
-        <label class="form-label" for="formTitle">Názov</label>
+        <label class="form-label" for="formTitle">Názov *</label>
     </div>
 
     <!-- Description input -->
     <div class="form-outline mb-4">
         <textarea class="form-control" id="formDescription" rows="2" name="description"><?=$post->getDescription()?></textarea>
-        <label class="form-label" for="formDescription">Popis</label>
+        <label class="form-label" for="formDescription">Popis *</label>
     </div>
 
     <!-- Paragraph1 input -->
     <div class="form-outline mb-4">
         <textarea class="form-control" id="formParagraph1" rows="3" name="paragraph1"><?=$post->getParagraph1()?></textarea>
-        <label class="form-label" for="formParagraph1">Paragraf 1</label>
+        <label class="form-label" for="formParagraph1">Paragraf 1 *</label>
     </div>
 
     <!-- Paragraph2 input -->

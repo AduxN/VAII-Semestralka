@@ -39,7 +39,7 @@ class AuthController extends AControllerBase
             }
         }
 
-        $data = ($logged === false ? ['message' => 'Zlý login alebo heslo!'] : []);
+        $data = ($logged === false ? ['error' => 'Zlý login alebo heslo!'] : []);
         return $this->html($data);
     }
 
@@ -62,10 +62,11 @@ class AuthController extends AControllerBase
 
     public function signIn(): Response
     {
-//        $id = $this->request()->getValue("id");
         if (!empty($_POST['login']) && !empty($_POST['email']) && !empty($_POST['password'])) {
+
             $login = $_POST['login'];
             $password = $_POST['password'];
+            $password2 = $_POST['password2'];
             $name = $_POST['name'];
             $email = $_POST['email'];
             $accounts = Account::getAll();
@@ -78,7 +79,9 @@ class AuthController extends AControllerBase
                     return $this->html(['error' => 'Email je už používaný.']);
                 }
             }
-
+            if ($password != $password2) {
+                return $this->html(['error' => 'Heslá sa nezhodujú.']);
+            }
 
             $account = new Account();
             $account->setLogin($login);
@@ -89,10 +92,11 @@ class AuthController extends AControllerBase
 
             // form validation PHP
             if (!$this->validateForm()) {
-                return $this->html(['error' => 'Chyba']);
+                return $this->html(['error' => 'Jeden z údajov je príliš dlhý']);
             }
 
             $account->save();
+            $this->login();
             return $this->redirect('?c=admin');
         }
         return $this->html(['error' => 'Nevyplnené povinné pole']);
@@ -105,10 +109,7 @@ class AuthController extends AControllerBase
         $name = $_POST['name'];
         $email = $_POST['email'];
 
-        if ($login == "" || strlen($login) > 30 || $password == "" || strlen($password) > 255 || $email == "" || strlen($email) > 100) {
-            return false;
-        }
-        if (strlen($name) > 255) {
+        if (strlen($login) > 30 || strlen($password) > 255 || strlen($email) > 100 || strlen($name) > 255) {
             return false;
         }
         return true;

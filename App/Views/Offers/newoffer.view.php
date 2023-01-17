@@ -10,13 +10,13 @@ $offer = $data;
     <!-- Title input -->
     <div class="form-outline mb-4">
         <input type="text" id="formTitle" class="form-control" name="title"/>
-        <label class="form-label" for="formTitle">Názov</label>
+        <label class="form-label" for="formTitle">Názov *</label>
     </div>
 
     <!-- Link input -->
     <div class="form-outline mb-4">
         <textarea class="form-control" id="formLink" rows="2" name="link"></textarea>
-        <label class="form-label" for="formLink">Link</label>
+        <label class="form-label" for="formLink">Link *</label>
     </div>
 
     <!-- Special input -->

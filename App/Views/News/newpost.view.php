@@ -13,25 +13,25 @@ $post = $data;
     <!-- Title input -->
     <div class="form-outline mb-4">
         <input type="text" id="formTitle" class="form-control" name="title" value="<?=$post->getTitle()?>"/>
-        <label class="form-label" for="formTitle">Názov</label>
+        <label class="form-label" for="formTitle">Názov *</label>
     </div>
 
     <!-- Description input -->
     <div class="form-outline mb-4">
         <textarea class="form-control" id="formDescription" rows="2" name="description"><?=$post->getDescription()?></textarea>
-        <label class="form-label" for="formDescription">Popis</label>
+        <label class="form-label" for="formDescription">Popis *</label>
     </div>
 
     <!-- Summary input -->
     <div class="form-outline mb-4">
         <textarea class="form-control" id="formSummary" rows="2" name="summ"><?=$post->getSummary()?></textarea>
-        <label class="form-label" for="formSummary">Zhrnutie</label>
+        <label class="form-label" for="formSummary">Zhrnutie *</label>
     </div>
 
     <!-- Content input -->
     <div class="form-outline mb-4">
         <textarea id="formContent" class="form-control" rows="3" name="content"><?=$post->getContent()?></textarea>
-        <label class="form-label" for="formContent">Obsah</label>
+        <label class="form-label" for="formContent">Obsah *</label>
     </div>
 
     <!-- Submit button -->

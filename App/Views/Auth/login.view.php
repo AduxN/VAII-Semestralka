@@ -6,7 +6,7 @@ $layout = 'auth';
 <div class="login">
     <form class="loginForm form rounded-lg" method="post" action="<?= \App\Config\Configuration::LOGIN_URL ?>">
         <div class="text-center text-danger mb-3">
-            <?= @$data['message'] ?>
+            <?= @$data['error'] ?>
         </div>
 
         <h3>Prihlásenie</h3>

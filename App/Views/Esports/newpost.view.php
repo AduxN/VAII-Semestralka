@@ -13,7 +13,7 @@ $post = $data;
     <!-- Title input -->
     <div class="form-outline mb-4">
         <input type="text" id="formTitle" class="form-control" name="title" value="<?=$post->getTitle()?>"/>
-        <label class="form-label" for="formTitle">Názov</label>
+        <label class="form-label" for="formTitle">Názov *</label>
     </div>
 
     <!-- Text input -->
